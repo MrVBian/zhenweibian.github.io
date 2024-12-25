@@ -1,18 +1,862 @@
+<!doctype html>
 <html>
 <head>
-	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.3.6/cerulean/bootstrap.min.css" media="all" />
+<meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
+
+<style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color: #ffffff; --text-color: #333333; --select-text-bg-color: #B5D6FC; --select-text-font-color: auto; --monospace: "Lucida Console",Consolas,"Courier",monospace; --title-bar-height: 20px; }
+.mac-os-11 { --title-bar-height: 28px; }
+html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+h1, h2, h3, h4, h5 { white-space: pre-wrap; }
+body { margin: 0px; padding: 0px; height: auto; inset: 0px; font-size: 1rem; line-height: 1.42857; overflow-x: hidden; background: inherit; }
+iframe { margin: auto; }
+a.url { word-break: break-all; }
+a:active, a:hover { outline: 0px; }
+.in-text-selection, ::selection { text-shadow: none; background: var(--select-text-bg-color); color: var(--select-text-font-color); }
+#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; overflow-wrap: break-word; position: relative; white-space: normal; overflow-x: visible; padding-top: 36px; }
+#write.first-line-indent p { text-indent: 2em; }
+#write.first-line-indent li p, #write.first-line-indent p * { text-indent: 0px; }
+#write.first-line-indent li { margin-left: 2em; }
+.for-image #write { padding-left: 8px; padding-right: 8px; }
+body.typora-export { padding-left: 30px; padding-right: 30px; }
+.typora-export .footnote-line, .typora-export li, .typora-export p { white-space: pre-wrap; }
+.typora-export .task-list-item input { pointer-events: none; }
+@media screen and (max-width: 500px) {
+  body.typora-export { padding-left: 0px; padding-right: 0px; }
+  #write { padding-left: 20px; padding-right: 20px; }
+}
+#write li > figure:last-child { margin-bottom: 0.5rem; }
+#write ol, #write ul { position: relative; }
+img { max-width: 100%; vertical-align: middle; image-orientation: from-image; }
+button, input, select, textarea { color: inherit; font: inherit; }
+input[type="checkbox"], input[type="radio"] { line-height: normal; padding: 0px; }
+*, ::after, ::before { box-sizing: border-box; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p, #write pre { width: inherit; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p { position: relative; }
+p { line-height: inherit; }
+h1, h2, h3, h4, h5, h6 { break-after: avoid-page; break-inside: avoid; orphans: 4; }
+p { orphans: 4; }
+h1 { font-size: 2rem; }
+h2 { font-size: 1.8rem; }
+h3 { font-size: 1.6rem; }
+h4 { font-size: 1.4rem; }
+h5 { font-size: 1.2rem; }
+h6 { font-size: 1rem; }
+.md-math-block, .md-rawblock, h1, h2, h3, h4, h5, h6, p { margin-top: 1rem; margin-bottom: 1rem; }
+.hidden { display: none; }
+.md-blockmeta { color: rgb(204, 204, 204); font-weight: 700; font-style: italic; }
+a { cursor: pointer; }
+sup.md-footnote { padding: 2px 4px; background-color: rgba(238, 238, 238, 0.7); color: rgb(85, 85, 85); border-radius: 4px; cursor: pointer; }
+sup.md-footnote a, sup.md-footnote a:hover { color: inherit; text-transform: inherit; text-decoration: inherit; }
+#write input[type="checkbox"] { cursor: pointer; width: inherit; height: inherit; }
+figure { overflow-x: auto; margin: 1.2em 0px; max-width: calc(100% + 16px); padding: 0px; }
+figure > table { margin: 0px; }
+thead, tr { break-inside: avoid; break-after: auto; }
+thead { display: table-header-group; }
+table { border-collapse: collapse; border-spacing: 0px; width: 100%; overflow: auto; break-inside: auto; text-align: left; }
+table.md-table td { min-width: 32px; }
+.CodeMirror-gutters { border-right: 0px; background-color: inherit; }
+.CodeMirror-linenumber { user-select: none; }
+.CodeMirror { text-align: left; }
+.CodeMirror-placeholder { opacity: 0.3; }
+.CodeMirror pre { padding: 0px 4px; }
+.CodeMirror-lines { padding: 0px; }
+div.hr:focus { cursor: none; }
+#write pre { white-space: pre-wrap; }
+#write.fences-no-line-wrapping pre { white-space: pre; }
+#write pre.ty-contain-cm { white-space: normal; }
+.CodeMirror-gutters { margin-right: 4px; }
+.md-fences { font-size: 0.9rem; display: block; break-inside: avoid; text-align: left; overflow: visible; white-space: pre; background: inherit; position: relative !important; }
+.md-fences-adv-panel { width: 100%; margin-top: 10px; text-align: center; padding-top: 0px; padding-bottom: 8px; overflow-x: auto; }
+#write .md-fences.mock-cm { white-space: pre-wrap; }
+.md-fences.md-fences-with-lineno { padding-left: 0px; }
+#write.fences-no-line-wrapping .md-fences.mock-cm { white-space: pre; overflow-x: auto; }
+.md-fences.mock-cm.md-fences-with-lineno { padding-left: 8px; }
+.CodeMirror-line, twitterwidget { break-inside: avoid; }
+svg { break-inside: avoid; }
+.footnotes { opacity: 0.8; font-size: 0.9rem; margin-top: 1em; margin-bottom: 1em; }
+.footnotes + .footnotes { margin-top: 0px; }
+.md-reset { margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: top; background: 0px 0px; text-decoration: none; text-shadow: none; float: none; position: static; width: auto; height: auto; white-space: nowrap; cursor: inherit; -webkit-tap-highlight-color: transparent; line-height: normal; font-weight: 400; text-align: left; box-sizing: content-box; direction: ltr; }
+li div { padding-top: 0px; }
+blockquote { margin: 1rem 0px; }
+li .mathjax-block, li p { margin: 0.5rem 0px; }
+li blockquote { margin: 1rem 0px; }
+li { margin: 0px; position: relative; }
+blockquote > :last-child { margin-bottom: 0px; }
+blockquote > :first-child, li > :first-child { margin-top: 0px; }
+.footnotes-area { color: rgb(136, 136, 136); margin-top: 0.714rem; padding-bottom: 0.143rem; white-space: normal; }
+#write .footnote-line { white-space: pre-wrap; }
+@media print {
+  body, html { border: 1px solid transparent; height: 99%; break-after: avoid; break-before: avoid; font-variant-ligatures: no-common-ligatures; }
+  #write { margin-top: 0px; border-color: transparent !important; padding-top: 0px !important; padding-bottom: 0px !important; }
+  .typora-export * { -webkit-print-color-adjust: exact; }
+  .typora-export #write { break-after: avoid; }
+  .typora-export #write::after { height: 0px; }
+  .is-mac table { break-inside: avoid; }
+  #write > p:nth-child(1) { margin-top: 0px; }
+  .typora-export-show-outline .typora-export-sidebar { display: none; }
+  figure { overflow-x: visible; }
+}
+.footnote-line { margin-top: 0.714em; font-size: 0.7em; }
+a img, img a { cursor: pointer; }
+pre.md-meta-block { font-size: 0.8rem; min-height: 0.8rem; white-space: pre-wrap; background: rgb(204, 204, 204); display: block; overflow-x: hidden; }
+p > .md-image:only-child:not(.md-img-error) img, p > img:only-child { display: block; margin: auto; }
+#write.first-line-indent p > .md-image:only-child:not(.md-img-error) img { left: -2em; position: relative; }
+p > .md-image:only-child { display: inline-block; width: 100%; }
+#write .MathJax_Display { margin: 0.8em 0px 0px; }
+.md-math-block { width: 100%; }
+.md-math-block:not(:empty)::after { display: none; }
+.MathJax_ref { fill: currentcolor; }
+[contenteditable="true"]:active, [contenteditable="true"]:focus, [contenteditable="false"]:active, [contenteditable="false"]:focus { outline: 0px; box-shadow: none; }
+.md-task-list-item { position: relative; list-style-type: none; }
+.task-list-item.md-task-list-item { padding-left: 0px; }
+.md-task-list-item > input { position: absolute; top: 0px; left: 0px; margin-left: -1.2em; margin-top: calc(1em - 10px); border: none; }
+.math { font-size: 1rem; }
+.md-toc { min-height: 3.58rem; position: relative; font-size: 0.9rem; border-radius: 10px; }
+.md-toc-content { position: relative; margin-left: 0px; }
+.md-toc-content::after, .md-toc::after { display: none; }
+.md-toc-item { display: block; color: rgb(65, 131, 196); }
+.md-toc-item a { text-decoration: none; }
+.md-toc-inner:hover { text-decoration: underline; }
+.md-toc-inner { display: inline-block; cursor: pointer; }
+.md-toc-h1 .md-toc-inner { margin-left: 0px; font-weight: 700; }
+.md-toc-h2 .md-toc-inner { margin-left: 2em; }
+.md-toc-h3 .md-toc-inner { margin-left: 4em; }
+.md-toc-h4 .md-toc-inner { margin-left: 6em; }
+.md-toc-h5 .md-toc-inner { margin-left: 8em; }
+.md-toc-h6 .md-toc-inner { margin-left: 10em; }
+@media screen and (max-width: 48em) {
+  .md-toc-h3 .md-toc-inner { margin-left: 3.5em; }
+  .md-toc-h4 .md-toc-inner { margin-left: 5em; }
+  .md-toc-h5 .md-toc-inner { margin-left: 6.5em; }
+  .md-toc-h6 .md-toc-inner { margin-left: 8em; }
+}
+a.md-toc-inner { font-size: inherit; font-style: inherit; font-weight: inherit; line-height: inherit; }
+.footnote-line a:not(.reversefootnote) { color: inherit; }
+.reversefootnote { font-family: ui-monospace, sans-serif; }
+.md-attr { display: none; }
+.md-fn-count::after { content: "."; }
+code, pre, samp, tt { font-family: var(--monospace); }
+kbd { margin: 0px 0.1em; padding: 0.1em 0.6em; font-size: 0.8em; color: rgb(36, 39, 41); background: rgb(255, 255, 255); border: 1px solid rgb(173, 179, 185); border-radius: 3px; box-shadow: rgba(12, 13, 14, 0.2) 0px 1px 0px, rgb(255, 255, 255) 0px 0px 0px 2px inset; white-space: nowrap; vertical-align: middle; }
+.md-comment { color: rgb(162, 127, 3); opacity: 0.6; font-family: var(--monospace); }
+code { text-align: left; vertical-align: initial; }
+a.md-print-anchor { white-space: pre !important; border-width: initial !important; border-style: none !important; border-color: initial !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: 0px !important; background: 0px 0px !important; text-decoration: initial !important; text-shadow: initial !important; }
+.os-windows.monocolor-emoji .md-emoji { font-family: "Segoe UI Symbol", sans-serif; }
+.md-diagram-panel > svg { max-width: 100%; }
+[lang="flow"] svg, [lang="mermaid"] svg { max-width: 100%; height: auto; }
+[lang="mermaid"] .node text { font-size: 1rem; }
+table tr th { border-bottom: 0px; }
+video { max-width: 100%; display: block; margin: 0px auto; }
+iframe { max-width: 100%; width: 100%; border: none; }
+.highlight td, .highlight tr { border: 0px; }
+mark { background: rgb(255, 255, 0); color: rgb(0, 0, 0); }
+.md-html-inline .md-plain, .md-html-inline strong, mark .md-inline-math, mark strong { color: inherit; }
+.md-expand mark .md-meta { opacity: 0.3 !important; }
+mark .md-meta { color: rgb(0, 0, 0); }
+@media print {
+  .typora-export h1, .typora-export h2, .typora-export h3, .typora-export h4, .typora-export h5, .typora-export h6 { break-inside: avoid; }
+}
+.md-diagram-panel .messageText { stroke: none !important; }
+.md-diagram-panel .start-state { fill: var(--node-fill); }
+.md-diagram-panel .edgeLabel rect { opacity: 1 !important; }
+.md-fences.md-fences-math { font-size: 1em; }
+.md-fences-advanced:not(.md-focus) { padding: 0px; white-space: nowrap; border: 0px; }
+.md-fences-advanced:not(.md-focus) { background: inherit; }
+.typora-export-show-outline .typora-export-content { max-width: 1440px; margin: auto; display: flex; flex-direction: row; }
+.typora-export-sidebar { width: 300px; font-size: 0.8rem; margin-top: 80px; margin-right: 18px; }
+.typora-export-show-outline #write { --webkit-flex: 2; flex: 2 1 0%; }
+.typora-export-sidebar .outline-content { position: fixed; top: 0px; max-height: 100%; overflow: hidden auto; padding-bottom: 30px; padding-top: 60px; width: 300px; }
+@media screen and (max-width: 1024px) {
+  .typora-export-sidebar, .typora-export-sidebar .outline-content { width: 240px; }
+}
+@media screen and (max-width: 800px) {
+  .typora-export-sidebar { display: none; }
+}
+.outline-content li, .outline-content ul { margin-left: 0px; margin-right: 0px; padding-left: 0px; padding-right: 0px; list-style: none; overflow-wrap: anywhere; }
+.outline-content ul { margin-top: 0px; margin-bottom: 0px; }
+.outline-content strong { font-weight: 400; }
+.outline-expander { width: 1rem; height: 1.42857rem; position: relative; display: table-cell; vertical-align: middle; cursor: pointer; padding-left: 4px; }
+.outline-expander::before { content: ""; position: relative; font-family: Ionicons; display: inline-block; font-size: 8px; vertical-align: middle; }
+.outline-item { padding-top: 3px; padding-bottom: 3px; cursor: pointer; }
+.outline-expander:hover::before { content: ""; }
+.outline-h1 > .outline-item { padding-left: 0px; }
+.outline-h2 > .outline-item { padding-left: 1em; }
+.outline-h3 > .outline-item { padding-left: 2em; }
+.outline-h4 > .outline-item { padding-left: 3em; }
+.outline-h5 > .outline-item { padding-left: 4em; }
+.outline-h6 > .outline-item { padding-left: 5em; }
+.outline-label { cursor: pointer; display: table-cell; vertical-align: middle; text-decoration: none; color: inherit; }
+.outline-label:hover { text-decoration: underline; }
+.outline-item:hover { border-color: rgb(245, 245, 245); background-color: var(--item-hover-bg-color); }
+.outline-item:hover { margin-left: -28px; margin-right: -28px; border-left: 28px solid transparent; border-right: 28px solid transparent; }
+.outline-item-single .outline-expander::before, .outline-item-single .outline-expander:hover::before { display: none; }
+.outline-item-open > .outline-item > .outline-expander::before { content: ""; }
+.outline-children { display: none; }
+.info-panel-tab-wrapper { display: none; }
+.outline-item-open > .outline-children { display: block; }
+.typora-export .outline-item { padding-top: 1px; padding-bottom: 1px; }
+.typora-export .outline-item:hover { margin-right: -8px; border-right: 8px solid transparent; }
+.typora-export .outline-expander::before { content: "+"; font-family: inherit; top: -1px; }
+.typora-export .outline-expander:hover::before, .typora-export .outline-item-open > .outline-item > .outline-expander::before { content: "−"; }
+.typora-export-collapse-outline .outline-children { display: none; }
+.typora-export-collapse-outline .outline-item-open > .outline-children, .typora-export-no-collapse-outline .outline-children { display: block; }
+.typora-export-no-collapse-outline .outline-expander::before { content: "" !important; }
+.typora-export-show-outline .outline-item-active > .outline-item .outline-label { font-weight: 700; }
+.md-inline-math-container mjx-container { zoom: 0.95; }
+mjx-container { break-inside: avoid; }
+.md-alert.md-alert-note { border-left-color: rgb(9, 105, 218); }
+.md-alert.md-alert-important { border-left-color: rgb(130, 80, 223); }
+.md-alert.md-alert-warning { border-left-color: rgb(154, 103, 0); }
+.md-alert.md-alert-tip { border-left-color: rgb(31, 136, 61); }
+.md-alert.md-alert-caution { border-left-color: rgb(207, 34, 46); }
+.md-alert { padding: 0px 1em; margin-bottom: 16px; color: inherit; border-left: 0.25em solid rgb(0, 0, 0); }
+.md-alert-text-note { color: rgb(9, 105, 218); }
+.md-alert-text-important { color: rgb(130, 80, 223); }
+.md-alert-text-warning { color: rgb(154, 103, 0); }
+.md-alert-text-tip { color: rgb(31, 136, 61); }
+.md-alert-text-caution { color: rgb(207, 34, 46); }
+.md-alert-text { font-size: 0.9rem; font-weight: 700; }
+.md-alert-text svg { fill: currentcolor; position: relative; top: 0.125em; margin-right: 1ch; overflow: visible; }
+.md-alert-text-container::after { content: attr(data-text); text-transform: capitalize; pointer-events: none; margin-right: 1ch; }
+
+
+
+:root {
+  /* == 字体设置 == */
+  /* 基准字体 */
+  /* 备选：Times, "Times New Roman" */
+  --base-Latin-font: "Latin Modern Roman", "Latin Modern Roman 10", Times;
+  --base-Chinese-font: "家族宋", "宋体-简", "华文宋体", "Noto Serif CJK SC";
+  --base-font-size: 9.5pt;
+  /* 引言字体 */
+  --quote-font: "Latin Modern Roman", "Latin Modern Roman 10", Times,
+    "Times New Roman", "华文仿宋";
+  /* em单位为一个正文字符（--base-font-size）大小，
+  例如，如果您设置 --base-font-size 为 9.5pt，那么 1.05em = 1.05*9.5pt ≈ 10pt。下面的标题字体等设置也遵循该规则。
+  这样，您就可以仅通过调整基准字体大小，而动态对其他元素大小做出调整。
+  当然，您也可以直接设置以pt或px为单位的数值，将元素的大小固定下来，如 --quote-font-size: 10pt; */
+  --quote-font-size: 1.05em;
+  /* 代码字体（代码中的中文会调用 ui-font） */
+  /* "Courier New" 从 Windows 3.1 起成为 Windows 官方提供的字体 */
+  /* "Consolas" 从 Windows Vista 起成为 Windows 官方提供的字体 */
+  --code-font: "Latin Modern Mono", "Latin Modern Mono 10", "Consolas", "Courier New";
+  /* 侧边栏字体 */
+  --ui-font: "Noto Sans CJK SC";
+  /* source mode 字体 */
+  /* 默认调用 code-font 和 ui-font */
+  --sourceMode-font: "SF Mono", "Noto Sans CJK SC";
+  /* 目录字体 */
+  /* 默认调用 base-font */
+  --toc-font: "";
+  /* 默认调用 base-font-size */
+  --toc-font-size: "";
+  /* 公式字体 */
+  --math-font-size: 1em;
+  /* 表格字体 */
+  /* 默认调用 heading-font */
+  --table-title-font: "";
+  /* 默认调用 base-font */
+  --table-font: "";
+  /* 标题字体（总设置） */
+  --heading-Latin-font: var(--base-Latin-font);
+  --heading-Chinese-font: "Noto Sans CJK SC";
+  /* 标题字体分别设置 */
+  /* 大标题（h1）字体 */
+  --title-Chinese-font: "Noto Sans CJK SC";
+  --title-font-size: 1.9em;
+  /* h2字体 */
+  --h2-Chinese-font: "Noto Sans CJK SC";
+  --h2-font-size: 1.5em;
+  /* h3字体 */
+  --h3-Chinese-font: "Noto Sans CJK SC";
+  --h3-font-size: 1.25em;
+  /* h4字体 */
+  --h4-Chinese-font: "Noto Serif CJK SC";
+  --h4-font-size: 1.15em;
+  /* h5字体 */
+  --h5-Chinese-font: "Noto Serif CJK SC";
+  --h5-font-size: 1.10em;
+  /* h6字体 */
+  --h6-Chinese-font: "Noto Serif CJK SC";
+  --h6-font-size: 1.05em;
+  /* 粗体样式设置 */
+  /* 加粗风格时使用的字重；400等同于 normal，700等同于 bold，900等同于 heavy */
+  --strong-weight: 900;
+  /* 基础行距 */
+  --base-line-height: 1.618em;
+  /* == 页面设置 == */
+  /* 打印页边距 */
+  --set-margin: 1.8cm 2cm 1.2cm 2cm !important;
+  /* == 控制设置 == */
+  /* 目录中是否显示一级标题 */
+  --toc-show-title: none;
+  /* == 颜色设置 == */
+  /* 超链接颜色 */
+  --link-color-light: #2E67D3;
+  --link-color-dark: #8bb1f9;
+  /* == 二级标题强制分页 == */
+  /* 默认值为 auto */
+  /* 更改为 page 启用强制分页 */
+  --page-break-before-h2: auto;
+}
+
+body {
+  padding: 0 !important;
+  margin: 0 !important;
+  /* counter-reset: tableHead 0 imgHead 0; */
+}
+
+@media print {
+  #write {
+    padding: 0 !important;
+  }
+  h2 {
+    break-before: var(--page-break-before-h2);
+  }
+  h2:first-of-type {
+    break-before: avoid-page;
+  }
+  @page {
+    margin: 1.8cm 2cm 1.2cm 2cm !important; /* 页边距 */
+  }
+}
+#write {
+  font-family: var(--base-Latin-font), var(--base-Chinese-font), serif;
+  font-size: var(--base-font-size);
+  /* A4标准宽度 */
+  max-width: 21cm;
+  background-color: white;
+  /* column-count: 2;
+    column-gap: 25px;
+    column-width: 8cm; 
+    display: inline-block; */
+  /* 这里可以试分栏的，但确实不适合实现 */
+}
+#write .md-math-block,
+#write .md-rawblock,
+#write p {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+#write p {
+  text-align: left;
+  line-height: var(--base-line-height);
+}
+#write a {
+  color: var(--link-color-light);
+}
+
+hr {
+  border-top: solid 1px #ddd;
+  margin-top: 1.8em;
+  margin-bottom: 1.8em;
+}
+
+img {
+  /* 避免图片在导出时被断开 */
+  break-inside: avoid-page;
+}
+
+strong {
+  font-weight: var(--strong-weight);
+}
+
+@media screen {
+  #write {
+    padding: var(--set-margin);
+    /* 添加一个淡蓝色的边框 */
+    /* border: 0.8px solid #AAC ; */
+    /* 页边阴影 */
+    box-shadow: 0 0 24px 12px #cccccc;
+  }
+}
+.MathJax {
+  font-size: var(--math-font-size);
+}
+
+/* typora 编写模式 */
+#typora-source {
+  font-family: var(--sourceMode-font), var(--code-font), var(--ui-font), monospace;
+  line-height: 2em;
+}
+
+/* 侧边大纲标题 */
+.sidebar-content {
+  counter-reset: outline-h1 outline-h2 outline-h3 outline-h4 outline-h5 outline-h6;
+}
+.sidebar-content .outline-h1 {
+  counter-reset: outline-h2 outline-h3 outline-h4 outline-h5 outline-h6;
+}
+.sidebar-content .outline-h2 {
+  counter-reset: outline-h3 outline-h4 outline-h5 outline-h6;
+}
+.sidebar-content .outline-h2 .outline-label:before {
+  counter-increment: outline-h2;
+  content: counter(outline-h2) " ";
+}
+.sidebar-content .outline-h3 {
+  counter-reset: outline-h4 outline-h5 outline-h6;
+}
+.sidebar-content .outline-h3 .outline-label:before {
+  counter-increment: outline-h3;
+  content: counter(outline-h2) "." counter(outline-h3) "  ";
+}
+.sidebar-content .outline-h4 {
+  counter-reset: outline-h5 outline-h6;
+}
+.sidebar-content .outline-h4 .outline-label:before {
+  counter-increment: outline-h4;
+  content: counter(outline-h2) "." counter(outline-h3) "." counter(outline-h4) "  ";
+}
+.sidebar-content .outline-h5 {
+  counter-reset: outline-h6;
+}
+.sidebar-content .outline-h5 .outline-label:before {
+  counter-increment: outline-h5;
+  content: counter(outline-h2) "." counter(outline-h3) "." counter(outline-h4) "." counter(outline-h5) "  ";
+}
+
+.sidebar-content {
+  /* 侧边栏的字体修改 */
+  font-family: var(--ui-font);
+  list-style: none;
+}
+
+/* 元数据（如 YAML front matter）的背景框 */
+pre.md-meta-block {
+  background: #cccccc;
+  padding: 1.4em;
+  font-family: var(--code-font), var(--ui-font), monospace;
+  font-size: 0.8em;
+}
+
+#write > h3.md-focus:before,
+#write > h4.md-focus:before,
+#write > h5.md-focus:before,
+#write > h6.md-focus:before,
+h3.md-focus:before,
+h4.md-focus:before,
+h5.md-focus:before,
+h6.md-focus:before {
+  color: inherit;
+  border: inherit;
+  border-radius: inherit;
+  position: inherit;
+  left: initial;
+  float: none;
+  top: initial;
+  font-size: inherit;
+  padding-left: inherit;
+  padding-right: inherit;
+  vertical-align: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+}
+
+#write {
+  counter-reset: h2 h3 h4 h5 h6;
+}
+#write h1,
+#write h2,
+#write h3,
+#write h4,
+#write h5,
+#write h6 {
+  break-after: avoid-page !important;
+}
+#write h1 {
+  font-family: var(--heading-Latin-font), var(--title-Chinese-font), serif;
+  text-align: center;
+  column-span: all;
+  font-size: var(--title-font-size);
+}
+#write h2 {
+  font-family: var(--heading-Latin-font), var(--h2-Chinese-font), serif;
+  font-size: var(--h2-font-size);
+}
+#write h3 {
+  font-family: var(--heading-Latin-font), var(--h3-Chinese-font), serif;
+  font-size: var(--h3-font-size);
+  line-height: var(--h3-font-size);
+}
+#write h4 {
+  font-family: var(--heading-Latin-font), var(--h4-Chinese-font), serif;
+  font-size: var(--h4-font-size);
+  line-height: var(--h4-font-size);
+}
+#write h5 {
+  font-family: var(--heading-Latin-font), var(--h5-Chinese-font), serif;
+  font-size: var(--h5-font-size);
+  line-height: var(--h5-font-size);
+}
+#write h6 {
+  font-family: var(--heading-Latin-font), var(--h6-Chinese-font), serif;
+  font-size: var(--h6-font-size);
+  /* 没有写错，为了避免行距太小才这么写 */
+  line-height: var(--h5-font-size);
+}
+#write h1 {
+  counter-reset: h2 h3 h4 h5 h6;
+}
+#write h2 {
+  counter-reset: h3 h4 h5 h6;
+}
+#write h3 {
+  counter-reset: h4 h5 h6;
+}
+#write h4 {
+  counter-reset: h5 h6;
+}
+#write h5 {
+  counter-reset: h6;
+}
+#write h2:before, h2.md-focus.md-heading:before {
+  content: counter(h2);
+  counter-increment: h2;
+  margin-right: 1.2em;
+}
+
+#write h3:before, h3.md-focus.md-heading:before {
+  content: counter(h2) "." counter(h3);
+  counter-increment: h3;
+  margin-right: 1.2em;
+}
+
+#write h4:before, h4.md-focus.md-heading:before {
+  content: counter(h2) "." counter(h3) "." counter(h4);
+  counter-increment: h4;
+  margin-right: 1.2em;
+}
+
+#write h5:before, h5.md-focus.md-heading:before {
+  content: counter(h2) "." counter(h3) "." counter(h4) "." counter(h5);
+  counter-increment: h5;
+  margin-right: 1.2em;
+}
+
+#write h6:before, h6.md-focus.md-heading:before {
+  content: counter(h2) "." counter(h3) "." counter(h4) "." counter(h5) "." counter(h6);
+  counter-increment: h6;
+  margin-right: 1.2em;
+}
+
+/* 参考文献（脚注）块 */
+.footnotes {
+  font-size: 0.95em;
+}
+
+.footnotes-area .footnote-line {
+  color: var(--text-color);
+}
+.footnotes-area hr {
+  border: 0;
+  color: rgba(0, 0, 0, 0);
+}
+
+/* 无序列表 */
+#write ul {
+  list-style: disc;
+}
+#write ul ul {
+  /*list-style: circle;*/
+  /* 请勿删除“–”后的空格, 他们对缩进有一定影响, 下同 */
+  list-style: "–   ";
+}
+#write ul ul ul {
+  list-style: "◦  ";
+}
+
+/* 有序列表 */
+#write ol {
+  list-style: decimal;
+}
+#write ol ol {
+  counter-reset: liist;
+  list-style: none;
+}
+#write ol ol > li {
+  counter-increment: liist;
+  position: relative;
+}
+#write ol ol > li::before {
+  content: "(" counter(liist, lower-alpha) ")";
+  position: absolute;
+  left: -1.8em;
+}
+#write ol ol ol {
+  counter-reset: liiist;
+  list-style: none;
+  margin: 0;
+}
+#write ol ol ol > li {
+  counter-increment: liiist;
+  position: relative;
+}
+#write ol ol ol > li::before {
+  content: counter(liiist, lower-roman) ".";
+  align-self: flex-end;
+  position: absolute;
+  left: -4.5em;
+  /* -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;*/
+  /* 为了让项目编号是重新用句点对齐而不是左对齐 */
+  width: 4em;
+  text-align: right;
+}
+
+#write ol,
+#write ul {
+  padding-inline-start: 2em;
+}
+
+#write li {
+  position: relative;
+}
+#write li + li,
+#write ul + ol > li,
+#write ol + ul > li,
+#write li > ul > li,
+#write li > ol > li {
+  margin-top: -0.8em;
+}
+
+/* task列表 */
+.md-task-list-item > input {
+  margin-top: 0.42em;
+  margin-left: -1.5em;
+  width: 1em !important;
+  height: 1em !important;
+}
+
+#write table {
+  /* 三线表第一条线宽度 */
+  border-top: 1.2pt solid;
+  /* 三线表第二条线宽度 */
+  border-bottom: 1.2pt solid;
+  font-family: var(--table-font), var(--base-Latin-font), var(--base-Chinese-font), serif;
+  /* font-size: var(--base-font-size); */
+  text-align: center;
+  break-inside: avoid-page;
+  border-spacing: 6px;
+  /* 自动布局表格宽度，如果有时内容太紧建议直接加空格吧，我自己看不惯和页面等宽的大表格 */
+  width: auto;
+  /* 使表格默认居中；虽然这个代码不好，但好像没别的实现办法 */
+  margin: 0 auto;
+}
+#write table td {
+  padding: 2px;
+}
+#write table tr {
+  padding: 2px;
+}
+#write th {
+  padding: 0px 6px;
+}
+#write thead {
+  /* 表格标题（首行）样式 */
+  /* 三线表表头的线 */
+  border-bottom: 0.5pt solid;
+  font-family: var(--table-title-font), var(--heading-Latin-font), var(--heading-Chinese-font), serif !important;
+  /* font-size: var(--base-font-size); */
+  font-weight: var(--strong-weight);
+}
+
+/* 一个>的引言仅为两字符缩进，使用>>的引言为传统引言样式，具有左竖线、左缩进 */
+blockquote {
+  font-style: normal;
+  font-family: var(--quote-font), var(--base-Latin-font), var(--base-Chinese-font), -apple-system, serif;
+  font-size: var(--quote-font-size);
+  /* 文字离左边框的距离 */
+  padding-left: 2em;
+  padding-right: 2em;
+  /* 左边框离页面边的距离 */
+  margin-left: 0;
+}
+
+blockquote blockquote {
+  border-left: 4px solid hsl(0, 0%, 70%);
+  padding-left: calc(2ch - 4px);
+  padding-right: 0;
+  margin-left: -4px;
+  border-radius: 0;
+}
+
+/* 行内代码 */
+code {
+  font-family: var(--code-font), var(--ui-font), monospace;
+}
+
+h1 code, h2 code, h3 code, h4 code, h5 code, h6 code,
+p code,
+li code {
+  color: rgb(60, 112, 198);
+  background-color: #fefefe;
+  /* 阴影 */
+  box-shadow: 0 0 1px 1px #c8d3df;
+  font-family: var(--code-font), var(--ui-font), monospace;
+  box-sizing: border-box;
+  border-right: 0px;
+  margin: 0 2px 0 2px;
+  padding: 0 2px 0 2px;
+  /* 圆角 */
+  border-radius: 2px 2px 2px 2px;
+}
+
+/* 代码块样式 */
+.md-fences,
+.CodeMirror pre,
+.CodeMirror-wrap {
+  /* padding: 10px; */
+  font-size: 1em;
+}
+
+.CodeMirror-code pre,
+.CodeMirror-sizer {
+  font-family: var(--code-font), var(--ui-font), monospace;
+}
+
+/* 目录 */
+.md-toc {
+  font-size: var(--toc-font-size);
+}
+
+.md-toc-content {
+  margin-left: 2em;
+  /* 修复缺失上级标题时无法递增 */
+  counter-reset: toc-h2 toc-h3 toc-h4;
+  break-after: page;
+}
+
+.md-toc-inner {
+  margin-left: 0 !important;
+  color: var(--text-color) !important;
+}
+
+.md-toc-item {
+  color: var(--text-color) !important;
+}
+
+/* 目录标题内容属性 */
+.md-toc-h2,
+.md-toc-h3,
+.md-toc-h4,
+.md-toc-h5,
+.md-toc-h6 {
+  font-size: var(--toc-font-size);
+  font-family: var(--toc-font), var(--base-Latin-font), var(--base-Chinese-font), serif;
+}
+
+.md-toc-h2 {
+  font-weight: var(--strong-weight);
+}
+
+/* 目录标题前 */
+.md-toc-content .md-toc-h1 {
+  display: var(--toc-show-title);
+  counter-reset: toc-h2 toc-h3 toc-h4 toc-h5 toc-h6;
+}
+.md-toc-content .md-toc-h2 {
+  counter-reset: toc-h3 toc-h4 toc-h5 toc-h6;
+}
+.md-toc-content .md-toc-h3 {
+  counter-reset: toc-h4 toc-h5 toc-h6;
+}
+.md-toc-content .md-toc-h4 {
+  counter-reset: toc-h5 toc-h6;
+}
+.md-toc-content .md-toc-h5 {
+  counter-reset: toc-h6;
+}
+.md-toc-content .md-toc-h2:before {
+  counter-increment: toc-h2;
+  content: counter(toc-h2);
+  margin-right: 1em;
+  font-weight: var(--strong-weight);
+}
+.md-toc-content .md-toc-h3:before {
+  counter-increment: toc-h3;
+  content: counter(toc-h2) "." counter(toc-h3);
+  margin-left: 1.5em;
+  margin-right: 0.5em;
+}
+.md-toc-content .md-toc-h4:before {
+  counter-increment: toc-h4;
+  content: counter(toc-h2) "." counter(toc-h3) "." counter(toc-h4);
+  margin-left: 3.5em;
+  margin-right: 0.5em;
+}
+.md-toc-content .md-toc-h5:before {
+  counter-increment: toc-h5;
+  content: counter(toc-h2) "." counter(toc-h3) "." counter(toc-h4) "." counter(toc-h5);
+  margin-left: 5.5em;
+  margin-right: 0.5em;
+}
+.md-toc-content .md-toc-h6:before {
+  counter-increment: toc-h6;
+  content: counter(toc-h2) "." counter(toc-h3) "." counter(toc-h4) "." counter(toc-h5) "." counter(toc-h6);
+  margin-left: 7.5em;
+  margin-right: 0.5em;
+}
+
+
+
+</style><title>index</title>
 </head>
-<body>
-	<div class="container">
-		<div class="row text-center">
-			<h1>Html Tester</h1>
-			<h4 class="text-danger">Free Online Html Tester</h4>
-			<div class="col-md-12">
-				<button type="button" class="btn">Basic</button>
-				<button type="button" class="btn btn-default">Default</button>
-				<button type="button" class="btn btn-primary">Primary</button>
-			</div>
-		</div>
-	</div>
+<body class='typora-export'><div class='typora-export-content'>
+<div id='write'  class=''><h1 id='工作成果------自我介绍'><span>工作成果——自我介绍</span></h1><center><div style='height:2mm;'></div><div style="font-family:华文楷体;font-size:14pt;">卞振伟，zhenweibian.sh@gmail.com</div></center>
+<center><span style="font-family:华文楷体;font-size:9pt;line-height:9mm">曲阜师范大学，软件工程，本科</span>
+</center>
+<div>
+<div style="width:52px;float:left; font-family:方正公文黑体;">摘　要：</div> 
+<div style="overflow:hidden; font-family:华文楷体;">在信息化时代背景下，计算机操作系统在各行业领域中得到广泛应用。本文试图通过对计算机系统概念、功能和分类、历史的介绍，大致地给出对计算机操作系统的认识，并通过对当前主流桌面操作系统Windows和macOS的简要介绍，使读者能够对现代图形界面操作系统有一个较为全面的了解，从而喜欢上某一个操作系统，供读者参考。</div>
+</div>
+<div>
+<div style="width:52px;float:left; font-family:方正公文黑体;">关键词：</div> 
+<div style="overflow:hidden; font-family:华文楷体;">计算机；操作系统；功能；发展；Windows；macOS；</div>
+</div><p>&nbsp;</p><h1 id='computer-work-hub-----operating-system'><span>Computer Work Hub — Operating System</span></h1><center><div style='height:2mm;'></div><div style="font-size:14pt;">Author</div></center>
+<center><span style="font-size:9pt;line-height:9mm"><i>Zhejiang University</i></span>
+</center>
+<div>
+<div style="width:82px;float:left;line-height:16pt"><b>Abstract: </b></div> 
+<div style="overflow:hidden;line-height:16pt">Under the background of the information age, computer operating systems are widely used in various industries. This paper tries to give a general understanding of the computer operating system by introducing the concept, functions and classifications, and history of computer systems. And by briefly introducing the current mainstream desktop operating systems Windows and macOS, readers can have a comprehensive view of modern graphical interface operating systems, and get to know thus begin to like one of them. This article is for readers' reference.</div>
+</div>
+<div>
+<div style="width:82px;float:left;line-height:16pt"><b>Key Words: </b></div> 
+<div style="overflow:hidden;line-height:16pt">Computer; Operating System; Function; Development; Windows; macOS;</div>
+</div><p>&nbsp;</p><p><strong><span>目录结构</span></strong><span>：</span></p><div class='md-toc' mdtype='toc'><p class="md-toc-content" role="list"><span role="listitem" class="md-toc-item md-toc-h1" data-ref="n412"><a class="md-toc-inner" href="#工作成果------自我介绍">工作成果——自我介绍</a></span><span role="listitem" class="md-toc-item md-toc-h1" data-ref="n420"><a class="md-toc-inner" href="#computer-work-hub-----operating-system">Computer Work Hub — Operating System</a></span><span role="listitem" class="md-toc-item md-toc-h1" data-ref="n429"><a class="md-toc-inner" href="#工作成果">工作成果</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n430"><a class="md-toc-inner" href="#2024-5-至今-掌门教育">2024-5 至今 掌门教育</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n431"><a class="md-toc-inner" href="#isaac仿真平台搭建及机器人训练">Isaac仿真平台搭建及机器人训练</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n434"><a class="md-toc-inner" href="#ros2上位机软件">ROS2上位机软件</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n437"><a class="md-toc-inner" href="#机器人数据数采存储及数据可视化">机器人数据数采存储及数据可视化</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n441"><a class="md-toc-inner" href="#机器人遥操webgl">机器人遥操WebGL</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n444"><a class="md-toc-inner" href="#gazebo仿真">Gazebo仿真</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n447"><a class="md-toc-inner" href="#2020-12-至-2024-4-视比特机器人有限公司">2020-12 至 2024-4 视比特机器人有限公司</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n452"><a class="md-toc-inner" href="#离散事件仿真软件">离散事件仿真软件</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n456"><a class="md-toc-inner" href="#焊接虚拟调试工艺包">焊接虚拟调试工艺包</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n459"><a class="md-toc-inner" href="#上下料单栈虚拟研发">上下料单栈虚拟研发</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n462"><a class="md-toc-inner" href="#中联长沙分拣线虚拟调试">中联长沙分拣线虚拟调试</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n465"><a class="md-toc-inner" href="#仿真软件内场景构建">仿真软件内场景构建</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n468"><a class="md-toc-inner" href="#上海展厅虚实同步-5x">上海展厅虚实同步 5x</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n471"><a class="md-toc-inner" href="#机器人编程流程图编程">机器人编程(流程图编程)</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n474"><a class="md-toc-inner" href="#服务器算力集群搭建">服务器算力集群搭建</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n477"><a class="md-toc-inner" href="#借助vrep进行sim2real码垛仿真">借助Vrep进行Sim2real码垛仿真</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n480"><a class="md-toc-inner" href="#ros1-rviz-插件编写">ROS1 Rviz 插件编写</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n483"><a class="md-toc-inner" href="#ros1-flow-based-programming">ROS1 flow based programming</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n486"><a class="md-toc-inner" href="#在校成果">在校成果</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n487"><a class="md-toc-inner" href="#论文">论文</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n495"><a class="md-toc-inner" href="#荣誉成绩">荣誉成绩</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n515"><a class="md-toc-inner" href="#基于计算机视觉的辅助驾驶系统">基于计算机视觉的辅助驾驶系统</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n538"><a class="md-toc-inner" href="#综合测评网站信息化统计审核量化分部署供学院使用）">综合测评网站（信息化统计审核量化分，部署供学院使用）</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n552"><a class="md-toc-inner" href="#蓝桥杯onlinejudge搭建及维护">蓝桥杯OnlineJudge搭建及维护</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n566"><a class="md-toc-inner" href="#程序竞赛协会">程序竞赛协会</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n578"><a class="md-toc-inner" href="#算法与数据结构在校编程竞赛">算法与数据结构(在校编程竞赛)</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n587"><a class="md-toc-inner" href="#acm训练题量400500之间训练笔记">ACM训练题量400~500之间，训练笔记</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n590"><a class="md-toc-inner" href="#熟悉linux开发环境">熟悉Linux开发环境</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n599"><a class="md-toc-inner" href="#机器学习">机器学习</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n609"><a class="md-toc-inner" href="#机器学习和深度学习手写笔记">机器学习和深度学习手写笔记：</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n612"><a class="md-toc-inner" href="#机器学习和深度学习思维导图">机器学习和深度学习思维导图</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n615"><a class="md-toc-inner" href="#pcl点云库笔记">PCL点云库笔记</a></span></p></div><h1 id='工作成果'><span>工作成果</span></h1><h2 id='2024-5-至今-掌门教育'><span>2024-5 至今 掌门教育</span></h2><h3 id='isaac仿真平台搭建及机器人训练'><span>Isaac仿真平台搭建及机器人训练</span></h3><p><strong><span>开发角色：</span></strong><span>个人</span>
+<strong><span>业务目标：</span></strong><span>运动学、动力学、虚拟视觉仿真</span></p><video src="./videos/20241118Isaac%E5%B1%95%E7%A4%BA.mp4" style="width: 100%; height: 100%;" controls="controls"></video><h3 id='ros2上位机软件'><span>ROS2上位机软件</span></h3><p><strong><span>开发角色：</span></strong><span>个人</span>
+<strong><span>业务目标：</span></strong><span>上位机软件，URDF模型制作</span></p><video src="https://gitlab.com/MrVBian/Introduction/-/raw/master/20241009%E4%B8%8A%E4%BD%8D%E6%9C%BA%E5%8A%9F%E8%83%BD%E5%B1%95%E7%A4%BA.mp4" style="width: 100%; height: 100%;" controls="controls"></video><h3 id='机器人数据数采存储及数据可视化'><span>机器人数据数采存储及数据可视化</span></h3><p><strong><span>开发角色：</span></strong><span>个人</span>
+<strong><span>业务目标：</span></strong><span>基于时序数据库(InfluxDB)、ROS2、Grafana，实现机器人数据数采存储及数据可视化</span></p><video src="https://gitlab.com/MrVBian/Introduction/-/raw/94cc1200a6bda16db76ef5575080ca0795c0acec/20241010%E6%97%B6%E5%BA%8F%E6%95%B0%E9%87%87.mp4" style="width: 100%; height: 100%;" controls="controls"></video><h3 id='机器人遥操webgl'><span>机器人遥操WebGL</span></h3><p><strong><span>开发角色：</span></strong><span>个人</span>
+<strong><span>业务目标：</span></strong><span>ROS2、WebSocket、Unity，辅助机器人遥操</span></p><video src="https://gitlab.com/MrVBian/Introduction/-/raw/94cc1200a6bda16db76ef5575080ca0795c0acec/20241010WebGL%E5%8A%9F%E8%83%BD%E5%B1%95%E7%A4%BA.mp4" style="width: 100%; height: 100%;" controls="controls"></video><h3 id='gazebo仿真'><span>Gazebo仿真</span></h3><p><strong><span>开发角色：</span></strong><span>个人</span>
+<strong><span>业务目标：</span></strong><span>在gazebo中模拟机器人、2D相机、3D相机、激光雷达，以供在仿真中训练算法</span></p><video src="https://gitlab.com/MrVBian/Introduction/-/raw/master/20240726Gazebo(lidar%20rgb%E5%92%8Cdepth%E7%9B%B8%E6%9C%BA).mp4" style="width: 100%; height: 100%;" controls="controls"></video><h2 id='2020-12-至-2024-4-视比特机器人有限公司'><span>2020-12 至 2024-4 视比特机器人有限公司</span></h2><p><span>介绍：从零到一开发数字孪生平台。数字孪生平台拥有丰富的组件模型库以及模型自动装配等功能，具备灵活的场景构建能力，平台内置物理引擎，能够高效模拟重力等物理属性，同时自带2D/3D图像生成、工艺仿真、物流仿真、虚拟调试、数字孪生功能，用于智能化工厂产线建设、程序开发、虚拟调试和数字孪生运营等功能。</span></p><p><img src="./imgs/title.png" referrerpolicy="no-referrer"></p><p><img src="./imgs/builder模板.png" referrerpolicy="no-referrer"></p><p><img src="./imgs/builder支撑方向.png" referrerpolicy="no-referrer"></p><h3 id='离散事件仿真软件'><span>离散事件仿真软件</span></h3><p><strong><span>开发角色：</span></strong><span>九人团队主管</span>
+<strong><span>主要工作：</span></strong><span>离散仿真器开发、节点设计</span>
+<strong><span>业务目标：推算年产量、优化节拍、优化布局</span></strong></p><p><img src="https://www.showdoc.com.cn/server/api/attachment/visitFile?sign=ec6e1a0ec2c4d67d1d843f3bfb451ce8&amp;file=file.png" referrerpolicy="no-referrer"></p><video src="https://gitlab.com/MrVBian/Introduction/-/raw/94cc1200a6bda16db76ef5575080ca0795c0acec/20240314%E8%8A%82%E6%8B%8D%E4%BB%BF%E7%9C%9F.mp4" style="width: 100%; height: 100%;" controls muted></video><h3 id='焊接虚拟调试工艺包'><span>焊接虚拟调试工艺包</span></h3><p><strong><span>开发角色：</span></strong><span>九人团队主管</span>
+<strong><span>主要工作：</span></strong><span>焊缝提取、机器人点位表、离线编程(fanuc)</span>
+<strong><span>业务目标：</span></strong><span>焊缝提取、机器人免示教、可视化编程</span></p><video src="https://gitlab.com/MrVBian/Introduction/-/raw/c99860d5c1a69aa525cea4e0aabf41c44f3d0b24/20231215%E7%84%8A%E6%8E%A5%E7%B4%A0%E6%9D%901.mp4" style="width: 100%; height: 100%;" controls="controls"></video><h3 id='上下料单栈虚拟研发'><span>上下料单栈虚拟研发</span></h3><p><strong><span>开发角色：</span></strong><span>九人团队主管</span>
+<strong><span>主要工作：</span></strong><span>相机标定、虚拟视觉仿真、行为树后端</span>
+<strong><span>业务目标：</span></strong><span>虚拟视觉2D/3D，相机标定、行为树编程</span></p><video src="https://gitlab.com/MrVBian/Introduction/-/raw/master/20220531%E4%B8%8A%E4%B8%8B%E6%96%99%E8%99%9A%E6%8B%9F%E8%B0%83%E8%AF%95.mp4" style="width: 100%; height: 100%;" controls="controls"></video><h3 id='中联长沙分拣线虚拟调试'><span>中联长沙分拣线虚拟调试</span></h3><p><strong><span>开发角色：</span></strong><span>九人团队主管</span>
+<strong><span>主要工作：</span></strong><span>虚拟视觉、传感器仿真、工业设备仿真(末端工具)</span>
+<strong><span>业务目标：</span></strong><span>各部门联调、虚拟视觉、工业设备仿真</span></p><video src="https://gitlab.com/MrVBian/Introduction/-/raw/master/20220609%E4%B8%AD%E8%81%94%E9%95%BF%E6%B2%99.mp4" style="width: 100%; height: 100%;" controls="controls"></video><h3 id='仿真软件内场景构建'><span>仿真软件内场景构建</span></h3><p><strong><span>开发角色：</span></strong><span>九人团队主管</span>
+<strong><span>主要工作：</span></strong><span>对齐、装配、参数化模型工具</span>
+<strong><span>业务目标：</span></strong><span>通过一系列工具辅助用户快速完成仿真场景的构建。包括例如：测距、捕捉、对齐、装配、阵列、角度捕捉等工具，以及参数化模型、机器人资产、工业设备资产等。</span></p><video src="https://gitlab.com/MrVBian/Introduction/-/raw/20d5c9c2deab9a5bfd5831821eecb89f99ad8aa2/20230107%E7%94%A8%E6%88%B7%E6%9E%84%E5%BB%BA%E5%9C%BA%E6%99%AF_%E4%B8%80%E5%88%86%E9%92%9F%E7%89%88.mp4" style="width: 100%; height: 100%;" controls="controls"></video><h3 id='上海展厅虚实同步-5x'><span>上海展厅虚实同步 5x</span></h3><p><strong><span>开发角色：</span></strong><span>九人团队主管</span>
+<strong><span>主要工作：</span></strong><span>分布式数采、虚实同步、模型压缩</span>
+<strong><span>业务工作：</span></strong><span>构建真实展厅科幻画风的虚实1:1同步，展示数字化展厅。</span></p><video src="https://gitlab.com/MrVBian/Introduction/-/raw/master/20220801%E4%B8%8A%E6%B5%B7%E5%B1%95%E5%8E%85_5x.mp4" style="width: 100%; height: 100%;" controls="controls"></video><h3 id='机器人编程流程图编程'><span>机器人编程(流程图编程)</span></h3><p><strong><span>开发人员：</span></strong><span>九人团队主管</span>
+<strong><span>主要工作：</span></strong><span>流程图后端开发</span>
+<strong><span>业务目标：</span></strong><span>可视化编程、机器人免示教</span></p><video src="https://gitlab.com/MrVBian/Introduction/-/raw/c99860d5c1a69aa525cea4e0aabf41c44f3d0b24/2023062318%E6%9C%BA%E5%99%A8%E4%BA%BA%E7%BC%96%E7%A8%8B.mp4" style="width: 100%; height: 100%;" controls="controls"></video><h3 id='服务器算力集群搭建'><span>服务器算力集群搭建</span></h3><p><strong><span>开发人员：</span></strong><span>三人团队组长</span>
+<strong><span>主要工作：</span></strong><span>开源平台的调研、运维开发和应用推广</span>
+<strong><span>业务目标：</span></strong><span>将服务器搭建成集群，通过统一web入口分配算力，维护高可用的服务器，避免资源浪费，有效管理服务器的资源分配</span></p><p><img src="https://gitlab.com/MrVBian/Introduction/-/raw/5698b04d07faefab82d9514914bbfaf65d09265b/2023%E9%9B%86%E7%BE%A4%E6%9E%B6%E6%9E%84.png" referrerpolicy="no-referrer"></p><h3 id='借助vrep进行sim2real码垛仿真'><span>借助Vrep进行Sim2real码垛仿真</span></h3><p><strong><span>开发人员：</span></strong><span>个人</span>
+<strong><span>业务目标：</span></strong><span>结合强化学习做出的决策，利用Vrep实现码垛仿真</span></p><p><img src="./imgs/16.gif" referrerpolicy="no-referrer"></p><h3 id='ros1-rviz-插件编写'><span>ROS1 Rviz 插件编写</span></h3><p><strong><span>开发人员：</span></strong><span>个人</span>
+<strong><span>业务目标：</span></strong><span>应公司内部需要开发一款基于ROS的仿真软件，专为Linux环境设计。该软件以Rviz为基础，旨在简化UI交互，提高用户友好性和易用性。通过ROS作为开发框架，我们能够充分利用其功能和工具库，实现强大的仿真功能，并与其他ROS节点和包进行无缝通信，实现与机器人系统的紧密集成。</span></p><p><img src="./imgs/17.png" referrerpolicy="no-referrer"></p><h3 id='ros1-flow-based-programming'><span>ROS1 flow based programming</span></h3><p><strong><span>开发人员：</span></strong><span>个人</span>
+<strong><span>业务目标：</span></strong><span>为了满足公司内部需求，我们将基于ROS开发一款基于流程图的图像化编程工具。该工具旨在帮助用户以图像化的方式对ROS进行编程控制，通过流程图的形式可视化编程逻辑。该工具将提供多个预定义的节点，每个节点代表了ROS中的不同功能和操作，根据需求选择适当的节点，并在图形界面中定义它们之间的连接关系。</span></p><p><img src="./imgs/18.gif" referrerpolicy="no-referrer"></p><h2 id='在校成果'><span>在校成果</span></h2><h3 id='论文'><span>论文</span></h3><ul><li><p><span>Driving Assistance System Based on Deep Learning and Traditional Vision  Zhenwei Bian, Tao Yu, Xin Zhang, Xiaoyan GongYe, CSA2020. </span></p></li><li><p><span>Learning 6D Pose of Texture-less Objects via Multi-scale Dense Relation  Junwen Huang, Zhenwei Bian, Yifei Shi, Xin Xu, Hongjia Zhang, Chenggang Xie，IVPAI2020. </span></p></li><li><p><span>Unsupervised Part-wise 3D Shape Reconstruction from Single-View RGB Images  Chengjie Niu, Yang Yu, Zhenwei Bian, Jun Li, Kai Xu, Computer Graphics Forum. </span></p></li></ul><h3 id='荣誉成绩'><span>荣誉成绩</span></h3><ul><li><p><span>山东省高校大学生人工智能大赛特等奖[2019.10]</span></p></li><li><p><span>第七届发现杯互联网应用开发与设计华东赛区一等奖[2020.05]</span></p></li><li><p><span>国际大学生程序设计竞赛2019年度秦皇岛、银川、西安全国总决赛优秀奖[2019]</span></p></li><li><p><span>蓝桥杯C/C++组国家三等奖，山东省一等奖[2019]</span></p></li><li><p><span>成立程序竞赛协会并担任会长[2018-2019]</span></p></li><li><p><span>计算机技术与软件专业技术资格中级软件设计师证[2018上半年]</span></p></li><li><p><span>一等奖学金(Top5%两次)  三好学生(Top5%两次)  优秀团员(Top15%)</span></p></li><li><p><strong><span>个人博客</span></strong></p></li></ul><p><strong><center><del><a href='https://www.bianzw.cn/' title='https://www.bianzw.cn/'><span>https://www.bianzw.cn/</span></a><span>（截止2020.4.1共237篇博文，已下线）</span></del></center></strong></p><p><img src="./imgs/1.jpg" referrerpolicy="no-referrer"></p><h3 id='基于计算机视觉的辅助驾驶系统'><span>基于计算机视觉的辅助驾驶系统</span></h3><p><strong><span>独立完成</span></strong></p><p><strong><span>实现大体流程</span></strong><span>：</span></p><ul><li><ol start='' ><li><p><span>前期：</span>
+<span>1.1 数据采集</span><strong><span>确保数据分布全部来自同一分布</span></strong><span>（这里是行车记录仪的录像）</span>
+<span>1.2 </span><strong><span>数据增强</span></strong><span>平移、旋转、翻转、椒盐噪声（Salt-and-pepper Noise）、高斯噪声（Gaussian Noise）等，由于涉及红绿灯颜色识别，不可采用改变颜色数值方式的数据增强策略。</span>
+<span>1.3 </span><strong><span>划分验证机-训练集-测试集</span></strong>
+<span>1.4 </span><strong><span>评估人类表现水平</span></strong><span>，水平取参与评估人每个人的识别率、专家每个人识别率和专家小组识别率的最高值。</span></p></li></ol></li><li><ol start='2' ><li><p><span>中期：</span>
+<span>2.1 查阅文献尽可能</span><strong><span>选取几个较优网络或者做迁移学习</span></strong><span>，目的是</span><strong><span>尽可能提高效率和效果</span></strong><span>，加快收敛。</span>
+<span>2.2 </span><strong><span>如果可避免偏差大于训练集与验证集之间错误率的差值，专注于减小偏差；反之，就应该专注于减小方差。</span></strong>
+<span>2.3 </span><strong><span>减少偏差：围绕增加隐藏层神经元个数和加深神经网络等方式做优化。减少方差：围绕获取更多训练数据（数据增强）、正则化、Dropout等方式做优化。</span></strong></p></li></ol></li><li><ol start='3' ><li><p><span>后期：</span>
+<span>3.1 做</span><strong><span>误差分析</span></strong><span>。</span>
+<span>3.2 </span><strong><span>评估人类表现水平、当前准确率、方差和偏差的值</span></strong><span>，决定下一步优化方向。</span>
+<span>3.3 </span><strong><span>计算不同情况误预测占所有误预测的比例</span></strong><span>，决定是否有必要针对某一情况做优化。</span></p></li></ol></li></ul><p><img src="./imgs/7.gif" referrerpolicy="no-referrer"></p><p><strong><span>论文</span></strong></p><p><strong><span>topic：Driving Assistance System Based on Deep Learning and Traditional Vision</span></strong></p><p><strong><span>Abstract.</span></strong><span> Relevant technologies such as computer vision and artificial intelligence are cheaper and easier to implement than detection technologies implemented by hardware such as lidar and radar. Cars are equipped with advanced intelligent driving assistance systems to prevent or reduce traffic accidents. In this context, this paper will identify and analyze the most important traffic lights, vehicles, and lane lines in traffic. Based on ImageNet pre-training, SqueezeNet builds fine-tuned network recognition traffic lights. Aims to achieve an assisted driving system that integrates deep learning and traditional vision. The final model size is only 7.84MB, the recognition accuracy is as high as 94.95%, and the processing speed is 12.4ms / frame. The single-frame processing speed of recognizer of YOLO v3 trained vehicle and classifier of B-CNN trained vehicle is up to 24.47ms. Using computer vision and mathematical operations, image perspective transformation, and polynomial fitting to analyze lane lines has the advantage of reducing cost.</span></p><p><strong><span>Keyword：Assisted driving ImageNet SqueezeNet YOLO v3 B-CNN</span></strong></p><p><span>Driving Assistance System Based on Deep Learning and Traditional Vision Zhenwei Bian, Tao Yu, Xin Zhang, Xiaoyan GongYe, CSA2020. China Conference</span></p><p><img src="./imgs/8.gif" referrerpolicy="no-referrer"></p><h3 id='综合测评网站信息化统计审核量化分部署供学院使用）'><span>综合测评网站（信息化统计审核量化分，部署供学院使用）</span></h3><p><span>共经历两次版本迭代：</span></p><p><span>版本一：我担任团队负责人，负责完全</span><strong><span>实现后端</span></strong><span>内容（基于Flask框架开发），并</span><strong><span>负责合并所有模块作最后项目部署和演示</span></strong><span>。共六人开发团队，使用由我</span><strong><span>搭建在个人服务器上SVN进行协作开发</span></strong><span>。</span></p><p><span>版本二：我担任团队负责人，负责完全</span><strong><span>实现前端内容及网站性能测试</span></strong><span>。共五人开发团队，</span><strong><span>担任队长</span></strong><span>，</span><strong><span>使用Git协作开发</span></strong><span>。</span></p><p><strong><span>在线访问地址：</span><del><a href='http://www.ablative.cn/lianghua/login' title='学生界面(已下线)'><span>学生界面</span></a></del></strong><span>(电脑版已下线)</span></p><p><span>演示学生账号：2017416000</span></p><p><span>演示学生密码：1234560..</span></p><p><strong><span>在线访问地址：</span><del><a href='http://test.ablative.cn/#/login?redirect=%2Fdashboard' title='管理员界面'><span>管理员界面</span></a></del></strong><span>(已下线)</span></p><p><span>演示管理员账号：admin</span></p><p><span>演示管理员密码：1234560..</span></p><p><span>软件结构见下图</span></p><p><img src="./imgs/4.jpg" referrerpolicy="no-referrer"></p><p><strong><span>演示视频</span></strong></p><video src="https://gitlab.com/MrVBian/Introduction/-/raw/master/%E6%96%B0%E7%89%88%E6%BC%94%E7%A4%BA%E8%A7%86%E9%A2%91.mp4" style="width: 100%; height: 100%;" controls="controls"></video><h3 id='蓝桥杯onlinejudge搭建及维护'><span>蓝桥杯OnlineJudge搭建及维护</span></h3><p><span>我</span><strong><span>负责OnlineJudge搭建及维护</span></strong><span>，</span><strong><span>协助老师编写题目和测试用例</span></strong></p><ul><li><p><span>已有521在校生使用</span></p></li><li><p><span>已有493道题目及我们生成的测试数据</span></p></li><li><p><span>针对蓝桥杯第三届、第四届、第五届和第六届C/C++组和Java组题目，协助老师编写题目答案和题目解析</span></p></li><li><p><span>协助老师组织寒假蓝桥杯训练，作为管理员身份将蓝桥杯题目出在我们的OnlineJudge平台，并设计出测试用例，供学生训练</span></p></li><li><p><span>在蓝桥杯寒假训练期间，接受学生反馈，历经一个月时间不断修复完善，满足了蓝桥杯训练要求。</span></p></li></ul><p><img src="./imgs/5.png" referrerpolicy="no-referrer"></p><h3 id='程序竞赛协会'><span>程序竞赛协会</span></h3><ul><li><p><span>创办程序竞赛协会并担任2018届首届会长，负责协会运营、活动场地申请。</span></p></li><li><p><span>组织大一新生C语言培训，平均每场80人次，共组织三场，参与四场（换届后参与一次培训）。</span></p></li><li><p><span>开设算法讲堂活动，组织由高年级对低年级的算法培训，平均每场六十多人，共举办7期，主题分别为二分法、DFS、逆元与二次幂、并查集、AC自动机、排列组合和BFPRT。</span></p></li><li><p><span>以主讲人身份参与了多次六十人以上协会算法培训，提高了同学们对算法的热情。</span></p></li><li><p><span>组织举办两场面向软件学院同学的程序设计竞赛，参与人员总数超过一百五十人，搭建局域网OnlineJudge，四台学院计算机作服务器进行负载均衡。</span></p></li></ul><h3 id='算法与数据结构在校编程竞赛'><span>算法与数据结构(在校编程竞赛)</span></h3><ul><li><p><span>C++</span></p></li><li><p><span>两年半的ACM训练期间，</span><strong><span>以图论为主，主要负责解决搜索问题、最短路问题、并查集问题、最小生成树问题、生成树问题、连通图问题、网络流问题、动态规划问题</span></strong><span>。在校期间参与</span><strong><span>复旦大学吴永辉副教授数论培训</span></strong><span>，</span><strong><span>了解绝大多数数论问题原理</span></strong><span>。</span></p></li><li><p><span>我的ACM算法知识图如下：</span></p></li></ul><p><img src="./imgs/9.png" referrerpolicy="no-referrer"></p><h3 id='acm训练题量400500之间训练笔记'><span>ACM训练题量400~500之间，训练笔记</span></h3><p><strong><center><a href='https://www.showdoc.com.cn/2268929339968005/10173021707270207' title='题解笔记'><span>题解笔记</span></a></center></strong></p><p><img src="./imgs/10.png" referrerpolicy="no-referrer"></p><h3 id='熟悉linux开发环境'><span>熟悉Linux开发环境</span></h3><ul><li><p><span>熟练Ubuntu系统下的开发。熟悉域名、SSL、CDN加速等网站服务。</span></p></li><li><p><span>终端开发爱好者，以neovim为主编辑器，ranger、tmux、fzf等终端工具进行开发。</span></p></li></ul><p><strong><center><a href='https://github.com/MrVBian/nvim' title='https://github.com/MrVBian/nvim'><span>https://github.com/MrVBian/nvim</span></a></center></strong></p><p><img src="./imgs/14.gif" referrerpolicy="no-referrer"></p><p><img src="./imgs/11.gif" referrerpolicy="no-referrer"></p><h3 id='机器学习'><span>机器学习</span></h3><ul><li><p><span>掌握机器学习和深度学习基础知识，认真学完了</span><strong><span>吴恩达-斯坦福CS229机器学习课程</span></strong><span>和</span><strong><span>吴恩达-斯坦福CS230深度学习课程</span></strong><span>，并做了详细手写笔记，其中机器学习8页（只做了部分笔记），深度学习53页。</span></p></li><li><p><span>已</span><strong><span>了解部分常见网络结构及原理</span></strong><span>。例如卷积神经网络的LeNet、AlexNet、VGG、resNet、Inception网络和YOLO等常见网络。循环神经网络掌握GRU和LSTM等基础知识，没有具体项目实践经验。</span></p></li><li><p><span>能够进行数据处理和可视化：</span><strong><span>掌握matplotlib、pandas、seaborn和numpy等python库使用</span></strong><span>。</span></p></li><li><p><span>熟悉计算机视觉库</span><strong><span>Opencv</span></strong><span>的C++开发和Python开发。</span></p></li></ul><h3 id='机器学习和深度学习手写笔记'><span>机器学习和深度学习手写笔记：</span></h3><p><strong><center><a href='笔记链接' title='https://www.showdoc.com.cn/2272923520770747'><span>https://www.showdoc.com.cn/2272923520770747</span></a></center></strong></p><p><img src="./imgs/12.png" referrerpolicy="no-referrer"></p><h3 id='机器学习和深度学习思维导图'><span>机器学习和深度学习思维导图</span></h3><p><a href='https://mrvbian.github.io/zhenweibian.github.io/MlAndDl.html' title='https://mrvbian.github.io/zhenweibian.github.io/MlAndDl.html'><span>https://mrvbian.github.io/zhenweibian.github.io/MlAndDl.html</span></a></p><p><img src="./imgs/15.png" referrerpolicy="no-referrer"></p><h3 id='pcl点云库笔记'><span>PCL点云库笔记</span></h3><p><strong><center><a href='https://github.com/MrVBian/PCLNotes' title='https://github.com/MrVBian/PCLNotes'><span>https://github.com/MrVBian/PCLNotes</span></a></center></strong></p><p><img src="./imgs/19.png" referrerpolicy="no-referrer"></p></div></div>
 </body>
 </html>

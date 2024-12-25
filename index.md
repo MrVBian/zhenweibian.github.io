@@ -315,7 +315,7 @@ Driving Assistance System Based on Deep Learning and Traditional Vision Zhenwei 
 
 ### 机器学习和深度学习思维导图
 
-[https://github.com/MrVBian/PCLNotes](https://github.com/MrVBian/PCLNotes "https://github.com/MrVBian/PCLNotes")
+[https://mrvbian.github.io/zhenweibian.github.io/MlAndDl.html](https://mrvbian.github.io/zhenweibian.github.io/MlAndDl.html "https://mrvbian.github.io/zhenweibian.github.io/MlAndDl.html")
 
 ![](./imgs/15.png)
 
