@@ -1,32 +1,37 @@
-# 工作成果——自我介绍
+# 工作成果 - 介绍
 
 <center><div style='height:2mm;'></div><div style="font-family:华文楷体;font-size:14pt;">卞振伟，zhenweibian.sh@gmail.com</div></center>
 <center><span style="font-family:华文楷体;font-size:9pt;line-height:9mm">曲阜师范大学，软件工程，本科</span>
 </center>
 <div>
 <div style="width:52px;float:left; font-family:方正公文黑体;">摘　要：</div> 
-<div style="overflow:hidden; font-family:华文楷体;">在信息化时代背景下，计算机操作系统在各行业领域中得到广泛应用。本文试图通过对计算机系统概念、功能和分类、历史的介绍，大致地给出对计算机操作系统的认识，并通过对当前主流桌面操作系统Windows和macOS的简要介绍，使读者能够对现代图形界面操作系统有一个较为全面的了解，从而喜欢上某一个操作系统，供读者参考。</div>
+<div style="overflow:hidden; font-family:华文楷体;">你好！我叫卞振伟，我的兴趣集中在机器人、仿真和软件工程、云原生这些领域。特别是，我对机器人仿真的完整生命周期充满了热情——从设计、通信、建模、训练到最终的决策，每一个环节都让我着迷。<br/>
+我相信卧薪尝胆终有回报，虽然期间有很多的不容易，但是我都没有放弃过，学了这一行，就深深的喜欢上它。我喜欢一句话“冥冥中该来则来，无处可逃”。我喜欢上了坐在电脑前敲代码，喜欢跟一堆程序员聊天。这辈子，我也逃不出去了，深深的陷了进来......</div>
 </div>
 <div>
 <div style="width:52px;float:left; font-family:方正公文黑体;">关键词：</div> 
-<div style="overflow:hidden; font-family:华文楷体;">计算机；操作系统；功能；发展；Windows；macOS；</div>
+<div style="overflow:hidden; font-family:华文楷体;">机器人；仿真；软件工程；云原生；</div>
 </div>
 
 
 
-# Computer Work Hub — Operating System
+
+# Work results - Introduction
 
 <center><div style='height:2mm;'></div><div style="font-size:14pt;">Author</div></center>
 <center><span style="font-size:9pt;line-height:9mm"><i>Zhejiang University</i></span>
 </center>
 <div>
 <div style="width:82px;float:left;line-height:16pt"><b>Abstract: </b></div> 
-<div style="overflow:hidden;line-height:16pt">Under the background of the information age, computer operating systems are widely used in various industries. This paper tries to give a general understanding of the computer operating system by introducing the concept, functions and classifications, and history of computer systems. And by briefly introducing the current mainstream desktop operating systems Windows and macOS, readers can have a comprehensive view of modern graphical interface operating systems, and get to know thus begin to like one of them. This article is for readers' reference.</div>
+<div style="overflow:hidden;line-height:16pt">
+Hi there! My name is Bian Zhenwei. My interests are in the fields of robotics, simulation, software engineering, and cluster management. In particular, I am passionate about the complete life cycle of robot simulation - from design, communication, modeling, training to final decision-making, every link fascinates me. <br/>
+I believe that hard work will eventually pay off. Although there were many difficulties during the period, I never gave up. After learning this line, I fell in love with it deeply. I like the saying "What is destined to come will come, and there is no escape." I like sitting in front of the computer and typing code, and I like chatting with a bunch of programmers. In this life, I can't escape, and I am deeply trapped in it...</div>
 </div>
 <div>
 <div style="width:82px;float:left;line-height:16pt"><b>Key Words: </b></div> 
-<div style="overflow:hidden;line-height:16pt">Computer; Operating System; Function; Development; Windows; macOS;</div>
+<div style="overflow:hidden;line-height:16pt">Robotics; Simulation; Software Engineering; Cloud Native;</div>
 </div>
+
 
 
 
@@ -253,7 +258,7 @@ Driving Assistance System Based on Deep Learning and Traditional Vision Zhenwei 
 
 <video src="https://gitlab.com/MrVBian/Introduction/-/raw/master/%E6%96%B0%E7%89%88%E6%BC%94%E7%A4%BA%E8%A7%86%E9%A2%91.mp4" style="width: 100%; height: 100%;" controls="controls"></video>
 
-### 蓝桥杯OnlineJudge搭建及维护
+### OnlineJudge搭建及维护
 
 我**负责OnlineJudge搭建及维护**，**协助老师编写题目和测试用例**
 
@@ -265,17 +270,9 @@ Driving Assistance System Based on Deep Learning and Traditional Vision Zhenwei 
 
 ![](./imgs/5.png)
 
-### 程序竞赛协会
+### 算法与数据结构(在校编程竞赛经历)
 
-- 创办程序竞赛协会并担任2018届首届会长，负责协会运营、活动场地申请。
-- 组织大一新生C语言培训，平均每场80人次，共组织三场，参与四场（换届后参与一次培训）。
-- 开设算法讲堂活动，组织由高年级对低年级的算法培训，平均每场六十多人，共举办7期，主题分别为二分法、DFS、逆元与二次幂、并查集、AC自动机、排列组合和BFPRT。
-- 以主讲人身份参与了多次六十人以上协会算法培训，提高了同学们对算法的热情。
-- 组织举办两场面向软件学院同学的程序设计竞赛，参与人员总数超过一百五十人，搭建局域网OnlineJudge，四台学院计算机作服务器进行负载均衡。
-
-### 算法与数据结构(在校编程竞赛)
-
-- C++
+- 编程语言：C++
 
 - 两年半的ACM训练期间，**以图论为主，主要负责解决搜索问题、最短路问题、并查集问题、最小生成树问题、生成树问题、连通图问题、网络流问题、动态规划问题**。在校期间参与**复旦大学吴永辉副教授数论培训**，**了解绝大多数数论问题原理**。
 
@@ -283,15 +280,20 @@ Driving Assistance System Based on Deep Learning and Traditional Vision Zhenwei 
 
 ![](./imgs/9.png)
 
-### ACM训练题量400~500之间，训练笔记
-
 **<center>[题解笔记](https://www.showdoc.com.cn/2268929339968005/10173021707270207 "题解笔记")</center>**
 
 ![](./imgs/10.png)
 
-### 熟悉Linux开发环境
+**组织创办程序竞赛协会**
 
-- 熟练Ubuntu系统下的开发。熟悉域名、SSL、CDN加速等网站服务。
+- 创办程序竞赛协会并担任2018届首届会长，负责协会运营、活动场地申请。
+- 组织大一新生C语言培训，平均每场80人次，共组织三场，参与四场（换届后参与一次培训）。
+- 开设算法讲堂活动，组织由高年级对低年级的算法培训，平均每场六十多人，共举办7期，主题分别为二分法、DFS、逆元与二次幂、并查集、AC自动机、排列组合和BFPRT。
+- 以主讲人身份参与了多次六十人以上协会算法培训，提高了同学们对算法的热情。
+- 组织举办两场面向软件学院同学的程序设计竞赛，参与人员总数超过一百五十人，搭建局域网OnlineJudge，四台学院计算机作服务器进行负载均衡。
+
+### Linux终端爱好者
+
 - 终端开发爱好者，以neovim为主编辑器，ranger、tmux、fzf等终端工具进行开发。
 
 **<center>[https://github.com/MrVBian/nvim](https://github.com/MrVBian/nvim "https://github.com/MrVBian/nvim")</center>**
@@ -300,20 +302,14 @@ Driving Assistance System Based on Deep Learning and Traditional Vision Zhenwei 
 
 ![](./imgs/11.gif)
 
-### 机器学习
+### 机器学习和深度学习
 
 - 掌握机器学习和深度学习基础知识，认真学完了**吴恩达-斯坦福CS229机器学习课程**和**吴恩达-斯坦福CS230深度学习课程**，并做了详细手写笔记，其中机器学习8页（只做了部分笔记），深度学习53页。
 - 已**了解部分常见网络结构及原理**。例如卷积神经网络的LeNet、AlexNet、VGG、resNet、Inception网络和YOLO等常见网络。循环神经网络掌握GRU和LSTM等基础知识，没有具体项目实践经验。
 - 能够进行数据处理和可视化：**掌握matplotlib、pandas、seaborn和numpy等python库使用**。
 - 熟悉计算机视觉库**Opencv**的C++开发和Python开发。
 
-### 机器学习和深度学习手写笔记：
-
-**<center>[https://www.showdoc.com.cn/2272923520770747](笔记链接 "https://www.showdoc.com.cn/2272923520770747")</center>**
-
-![](./imgs/12.png)
-
-### 机器学习和深度学习思维导图
+**机器学习和深度学习思维导图：**
 
 [https://mrvbian.github.io/zhenweibian.github.io/MlAndDl.html](https://mrvbian.github.io/zhenweibian.github.io/MlAndDl.html "https://mrvbian.github.io/zhenweibian.github.io/MlAndDl.html")
 
