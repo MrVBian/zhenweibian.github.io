@@ -58,7 +58,7 @@ I believe that hard work will eventually pay off. Although there were many diffi
 
 <video src="https://gitlab.com/MrVBian/Introduction/-/raw/master/20241009%E4%B8%8A%E4%BD%8D%E6%9C%BA%E5%8A%9F%E8%83%BD%E5%B1%95%E7%A4%BA.mp4" style="width: 100%; height: 100%;" controls="controls"></video>
 
-### 机器人数据数采存储及数据可视化
+### 机器人数据存储及可视化
 
 **开发角色：**个人
 **业务目标：**基于时序数据库(InfluxDB)、ROS2、Grafana，实现机器人数据数采存储及数据可视化
@@ -82,15 +82,17 @@ I believe that hard work will eventually pay off. Although there were many diffi
 
 ## 2020-12 至 2024-4 视比特机器人有限公司
 
+### 仿真软件开发
+
 介绍：从零到一开发数字孪生平台。数字孪生平台拥有丰富的组件模型库以及模型自动装配等功能，具备灵活的场景构建能力，平台内置物理引擎，能够高效模拟重力等物理属性，同时自带2D/3D图像生成、工艺仿真、物流仿真、虚拟调试、数字孪生功能，用于智能化工厂产线建设、程序开发、虚拟调试和数字孪生运营等功能。
 
-![](./imgs/title.png)
+![](./assets/title.png)
 
-![](./imgs/builder模板.png)
+![](./assets/builder模板.png)
 
-![](./imgs/builder支撑方向.png)
+![](./assets/builder支撑方向.png)
 
-### 离散事件仿真软件
+#### 离散事件仿真软件
 
 **开发角色：**九人团队主管
 **主要工作：**离散仿真器开发、节点设计
@@ -100,7 +102,7 @@ I believe that hard work will eventually pay off. Although there were many diffi
 
 <video src="https://gitlab.com/MrVBian/Introduction/-/raw/94cc1200a6bda16db76ef5575080ca0795c0acec/20240314%E8%8A%82%E6%8B%8D%E4%BB%BF%E7%9C%9F.mp4" style="width: 100%; height: 100%;" controls muted></video>
 
-### 焊接虚拟调试工艺包
+#### 焊接虚拟调试工艺包
 
 **开发角色：**九人团队主管
 **主要工作：**焊缝提取、机器人点位表、离线编程(fanuc)
@@ -108,39 +110,40 @@ I believe that hard work will eventually pay off. Although there were many diffi
 
 <video src="https://gitlab.com/MrVBian/Introduction/-/raw/c99860d5c1a69aa525cea4e0aabf41c44f3d0b24/20231215%E7%84%8A%E6%8E%A5%E7%B4%A0%E6%9D%901.mp4" style="width: 100%; height: 100%;" controls="controls"></video>
 
-### 上下料单栈虚拟研发
+#### 上下料单栈虚拟研发
 
 **开发角色：**九人团队主管
 **主要工作：**相机标定、虚拟视觉仿真、行为树后端
 **业务目标：**虚拟视觉2D/3D，相机标定、行为树编程
 <video src="https://gitlab.com/MrVBian/Introduction/-/raw/master/20220531%E4%B8%8A%E4%B8%8B%E6%96%99%E8%99%9A%E6%8B%9F%E8%B0%83%E8%AF%95.mp4" style="width: 100%; height: 100%;" controls="controls"></video>
 
-### 中联长沙分拣线虚拟调试
+#### 中联长沙分拣线虚拟调试
 
 **开发角色：**九人团队主管
 **主要工作：**虚拟视觉、传感器仿真、工业设备仿真(末端工具)
 **业务目标：**各部门联调、虚拟视觉、工业设备仿真
 <video src="https://gitlab.com/MrVBian/Introduction/-/raw/master/20220609%E4%B8%AD%E8%81%94%E9%95%BF%E6%B2%99.mp4" style="width: 100%; height: 100%;" controls="controls"></video>
 
-### 仿真软件内场景构建
+#### 仿真软件内场景构建
 
 **开发角色：**九人团队主管
 **主要工作：**对齐、装配、参数化模型工具
 **业务目标：**通过一系列工具辅助用户快速完成仿真场景的构建。包括例如：测距、捕捉、对齐、装配、阵列、角度捕捉等工具，以及参数化模型、机器人资产、工业设备资产等。
 <video src="https://gitlab.com/MrVBian/Introduction/-/raw/20d5c9c2deab9a5bfd5831821eecb89f99ad8aa2/20230107%E7%94%A8%E6%88%B7%E6%9E%84%E5%BB%BA%E5%9C%BA%E6%99%AF_%E4%B8%80%E5%88%86%E9%92%9F%E7%89%88.mp4" style="width: 100%; height: 100%;" controls="controls"></video>
 
-### 上海展厅虚实同步 5x
+#### 上海展厅虚实同步 5x
 
 **开发角色：**九人团队主管
 **主要工作：**分布式数采、虚实同步、模型压缩
 **业务工作：**构建真实展厅科幻画风的虚实1:1同步，展示数字化展厅。
 <video src="https://gitlab.com/MrVBian/Introduction/-/raw/master/20220801%E4%B8%8A%E6%B5%B7%E5%B1%95%E5%8E%85_5x.mp4" style="width: 100%; height: 100%;" controls="controls"></video>
 
-### 机器人编程(流程图编程)
+#### 机器人编程(流程图编程)
 
 **开发人员：**九人团队主管
 **主要工作：**流程图后端开发
 **业务目标：**可视化编程、机器人免示教
+
 <video src="https://gitlab.com/MrVBian/Introduction/-/raw/c99860d5c1a69aa525cea4e0aabf41c44f3d0b24/2023062318%E6%9C%BA%E5%99%A8%E4%BA%BA%E7%BC%96%E7%A8%8B.mp4" style="width: 100%; height: 100%;" controls="controls"></video>
 
 ### 服务器算力集群搭建
@@ -156,21 +159,27 @@ I believe that hard work will eventually pay off. Although there were many diffi
 **开发人员：**个人
 **业务目标：**结合强化学习做出的决策，利用Vrep实现码垛仿真
 
-![](./imgs/16.gif)
+![](./assets/16.gif)
 
 ### ROS1 Rviz 插件编写
 
 **开发人员：**个人
 **业务目标：**应公司内部需要开发一款基于ROS的仿真软件，专为Linux环境设计。该软件以Rviz为基础，旨在简化UI交互，提高用户友好性和易用性。通过ROS作为开发框架，我们能够充分利用其功能和工具库，实现强大的仿真功能，并与其他ROS节点和包进行无缝通信，实现与机器人系统的紧密集成。
 
-![](./imgs/17.png)
+![](./assets/17.png)
 
 ### ROS1 flow based programming
 
 **开发人员：**个人
 **业务目标：**为了满足公司内部需求，我们将基于ROS开发一款基于流程图的图像化编程工具。该工具旨在帮助用户以图像化的方式对ROS进行编程控制，通过流程图的形式可视化编程逻辑。该工具将提供多个预定义的节点，每个节点代表了ROS中的不同功能和操作，根据需求选择适当的节点，并在图形界面中定义它们之间的连接关系。
 
-![](./imgs/18.gif)
+![](./assets/18.gif)
+
+### PCL点云库
+
+[https://github.com/MrVBian/PCLNotes](https://github.com/MrVBian/PCLNotes "https://github.com/MrVBian/PCLNotes")
+
+![](./assets/19.png)
 
 ## 在校成果
 
@@ -194,7 +203,7 @@ I believe that hard work will eventually pay off. Although there were many diffi
 
 **<center>~~[https://www.bianzw.cn/](https://www.bianzw.cn/ "https://www.bianzw.cn/")（截止2020.4.1共237篇博文，已下线）~~</center>**
 
-![](./imgs/1.jpg)
+![](./assets/1.jpg)
 
 ### 基于计算机视觉的辅助驾驶系统
 
@@ -216,7 +225,7 @@ I believe that hard work will eventually pay off. Although there were many diffi
      3.2 **评估人类表现水平、当前准确率、方差和偏差的值**，决定下一步优化方向。
      3.3 **计算不同情况误预测占所有误预测的比例**，决定是否有必要针对某一情况做优化。
 
-![](./imgs/7.gif)
+![](./assets/7.gif)
 
 **论文**
 
@@ -228,9 +237,11 @@ I believe that hard work will eventually pay off. Although there were many diffi
 
 Driving Assistance System Based on Deep Learning and Traditional Vision Zhenwei Bian, Tao Yu, Xin Zhang, Xiaoyan GongYe, CSA2020. China Conference
 
-![](./imgs/8.gif)
+![](./assets/8.gif)
 
-### 综合测评网站（信息化统计审核量化分，部署供学院使用）
+### 综合测评网站
+
+作用：信息化统计审核量化分，部署供学院使用
 
 共经历两次版本迭代：
 
@@ -252,7 +263,7 @@ Driving Assistance System Based on Deep Learning and Traditional Vision Zhenwei 
 
 软件结构见下图
 
-![](./imgs/4.jpg)
+![](./assets/4.jpg)
 
 **演示视频**
 
@@ -268,7 +279,7 @@ Driving Assistance System Based on Deep Learning and Traditional Vision Zhenwei 
 - 协助老师组织寒假蓝桥杯训练，作为管理员身份将蓝桥杯题目出在我们的OnlineJudge平台，并设计出测试用例，供学生训练
 - 在蓝桥杯寒假训练期间，接受学生反馈，历经一个月时间不断修复完善，满足了蓝桥杯训练要求。
 
-![](./imgs/5.png)
+![](./assets/5.png)
 
 ### 算法与数据结构(在校编程竞赛经历)
 
@@ -278,11 +289,11 @@ Driving Assistance System Based on Deep Learning and Traditional Vision Zhenwei 
 
 - 我的ACM算法知识图如下：
 
-![](./imgs/9.png)
+![](./assets/9.png)
 
 **<center>[题解笔记](https://www.showdoc.com.cn/2268929339968005/10173021707270207 "题解笔记")</center>**
 
-![](./imgs/10.png)
+![](./assets/10.png)
 
 **组织创办程序竞赛协会**
 
@@ -298,9 +309,9 @@ Driving Assistance System Based on Deep Learning and Traditional Vision Zhenwei 
 
 **<center>[https://github.com/MrVBian/nvim](https://github.com/MrVBian/nvim "https://github.com/MrVBian/nvim")</center>**
 
-![](./imgs/14.gif)
+![](./assets/14.gif)
 
-![](./imgs/11.gif)
+![](./assets/11.gif)
 
 ### 机器学习和深度学习
 
@@ -313,10 +324,4 @@ Driving Assistance System Based on Deep Learning and Traditional Vision Zhenwei 
 
 [https://mrvbian.github.io/zhenweibian.github.io/MlAndDl.html](https://mrvbian.github.io/zhenweibian.github.io/MlAndDl.html "https://mrvbian.github.io/zhenweibian.github.io/MlAndDl.html")
 
-![](./imgs/15.png)
-
-### PCL点云库笔记
-
-**<center>[https://github.com/MrVBian/PCLNotes](https://github.com/MrVBian/PCLNotes "https://github.com/MrVBian/PCLNotes")</center>**
-
-![](./imgs/19.png)
+![](./assets/15.png)
