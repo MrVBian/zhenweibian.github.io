@@ -5,14 +5,12 @@
 </center>
 <div>
 <div style="width:52px;float:left; font-family:方正公文黑体;">摘　要：</div> 
-<div style="overflow:hidden; font-family:华文楷体;">你好！我叫卞振伟，我的兴趣集中在机器人、仿真和软件工程、云原生这些领域。特别是，我对机器人仿真的完整生命周期充满了热情——从设计、通信、建模、训练到最终的决策，每一个环节都让我着迷。<br/>
-我相信卧薪尝胆终有回报，虽然期间有很多的不容易，但是我都没有放弃过，学了这一行，就深深的喜欢上它。我喜欢一句话“冥冥中该来则来，无处可逃”。我喜欢上了坐在电脑前敲代码，喜欢跟一堆程序员聊天。这辈子，我也逃不出去了，深深的陷了进来......</div>
+<div style="overflow:hidden; font-family:华文楷体;">你好！我叫卞振伟，我的兴趣集中在机器人、仿真和软件工程、云原生这些领域。特别是，我对机器人仿真的完整生命周期充满了热情——从设计、通信、仿真、训练到最终的决策，每一个环节都让我着迷。我相信卧薪尝胆终有回报，虽然期间有很多的不容易，但是我都没有放弃过，学了这一行，就深深的喜欢上它。我喜欢一句话“冥冥中该来则来，无处可逃”。我喜欢上了坐在电脑前敲代码，喜欢跟一堆程序员聊天。这辈子，我也逃不出去了，深深的陷了进来......</div>
 </div>
 <div>
 <div style="width:52px;float:left; font-family:方正公文黑体;">关键词：</div> 
 <div style="overflow:hidden; font-family:华文楷体;">机器人；仿真；软件工程；云原生；</div>
 </div>
-
 
 
 
@@ -24,15 +22,12 @@
 <div>
 <div style="width:82px;float:left;line-height:16pt"><b>Abstract: </b></div> 
 <div style="overflow:hidden;line-height:16pt">
-Hi there! My name is Bian Zhenwei. My interests are in the fields of robotics, simulation, software engineering, and cluster management. In particular, I am passionate about the complete life cycle of robot simulation - from design, communication, modeling, training to final decision-making, every link fascinates me. <br/>
-I believe that hard work will eventually pay off. Although there were many difficulties during the period, I never gave up. After learning this line, I fell in love with it deeply. I like the saying "What is destined to come will come, and there is no escape." I like sitting in front of the computer and typing code, and I like chatting with a bunch of programmers. In this life, I can't escape, and I am deeply trapped in it...</div>
+Hi there! My name is Bian Zhenwei. My interests are in the fields of robotics, simulation, software engineering, and cluster management. In particular, I am passionate about the complete life cycle of robot simulation - from design, communication, modeling, training to final decision-making, every link fascinates me. I believe that hard work will eventually pay off. Although there were many difficulties during the period, I never gave up. After learning this line, I fell in love with it deeply. I like the saying "What is destined to come will come, and there is no escape." I like sitting in front of the computer and typing code, and I like chatting with a bunch of programmers. In this life, I can't escape, and I am deeply trapped in it...</div>
 </div>
 <div>
 <div style="width:82px;float:left;line-height:16pt"><b>Key Words: </b></div> 
 <div style="overflow:hidden;line-height:16pt">Robotics; Simulation; Software Engineering; Cloud Native;</div>
 </div>
-
-
 
 
 **目录结构**：
@@ -149,8 +144,11 @@ I believe that hard work will eventually pay off. Although there were many diffi
 ### 服务器算力集群搭建
 
 **开发人员：**三人团队组长
-**主要工作：**开源平台的调研、运维开发和应用推广
-**业务目标：**将服务器搭建成集群，通过统一web入口分配算力，维护高可用的服务器，避免资源浪费，有效管理服务器的资源分配
+**主要工作：**开源平台调研、集群构建、运维开发、Jenkins编写、容器制作
+**业务目标：**
+- 将服务器搭建成集群：通过统一web入口分配算力，维护高可用的服务器，避免资源浪费，有效管理服务器的资源分配
+- 统一账号管理：通过单一账号登录多平台，简化账号管理
+- DevOps：搭建流水线，编写Jenkins流水线，实现harbor和sonarqube代码质量检查
 
 ![](https://gitlab.com/MrVBian/Introduction/-/raw/5698b04d07faefab82d9514914bbfaf65d09265b/2023%E9%9B%86%E7%BE%A4%E6%9E%B6%E6%9E%84.png)
 
