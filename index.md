@@ -16,7 +16,7 @@
 
 # Work results - Introduction
 
-<center><div style='height:2mm;'></div><div style="font-size:14pt;">Zhenwei Bian</div></center>
+<center><div style='height:2mm;'></div><div style="font-size:14pt;">Zhenwei Bian, zhenweibian.sh@gmail.com</div></center>
 <center><span style="font-size:9pt;line-height:9mm"><i>Qufu Normal University, Software Engineering</i></span>
 </center>
 <div>
@@ -28,6 +28,7 @@ Hi there! My name is Bian Zhenwei. My interests are in the fields of robotics, s
 <div style="width:82px;float:left;line-height:16pt"><b>Key Words: </b></div> 
 <div style="overflow:hidden;line-height:16pt">Robotics; Simulation; Software Engineering; Cloud Native;</div>
 </div>
+
 
 
 
