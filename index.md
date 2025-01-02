@@ -16,8 +16,8 @@
 
 # Work results - Introduction
 
-<center><div style='height:2mm;'></div><div style="font-size:14pt;">Author</div></center>
-<center><span style="font-size:9pt;line-height:9mm"><i>Zhejiang University</i></span>
+<center><div style='height:2mm;'></div><div style="font-size:14pt;">Zhenwei Bian</div></center>
+<center><span style="font-size:9pt;line-height:9mm"><i>Qufu Normal University, Software Engineering</i></span>
 </center>
 <div>
 <div style="width:82px;float:left;line-height:16pt"><b>Abstract: </b></div> 
@@ -30,6 +30,7 @@ Hi there! My name is Bian Zhenwei. My interests are in the fields of robotics, s
 </div>
 
 
+
 **目录结构**：
 
 [TOC]
@@ -37,7 +38,7 @@ Hi there! My name is Bian Zhenwei. My interests are in the fields of robotics, s
 
 #  工作成果
 
-## 2024-5 至今 掌门教育
+## 2024-5 至今 XX公司
 
 ### Isaac仿真平台搭建及机器人训练
 

@@ -1,3 +1,8 @@
+```html
+<title>卞振伟工作成果</title>
+<link rel="icon" href="./assets/B.ico" type="image/x-icon">
+```
+
 <details><summary><h2>Or you may want an English version:</h2></summary>
 
 ### Hi there 👋
