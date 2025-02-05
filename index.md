@@ -1,11 +1,10 @@
 # 工作成果 - 介绍
 
 <center><div style='height:2mm;'></div><div style="font-family:华文楷体;font-size:14pt;">卞振伟，zhenweibian.sh@gmail.com</div></center>
-<center><span style="font-family:华文楷体;font-size:9pt;line-height:9mm">曲阜师范大学，软件工程，本科</span>
-</center>
+
 <div>
 <div style="width:52px;float:left; font-family:方正公文黑体;">摘　要：</div> 
-<div style="overflow:hidden; font-family:华文楷体;">你好！我叫卞振伟，我的兴趣集中在机器人、仿真和软件工程、云原生这些领域。特别是，我对机器人仿真的完整生命周期充满了热情——从设计、通信、仿真、训练到最终的决策，每一个环节都让我着迷。我相信卧薪尝胆终有回报，虽然期间有很多的不容易，但是我都没有放弃过，学了这一行，就深深的喜欢上它。我喜欢一句话“冥冥中该来则来，无处可逃”。我喜欢上了坐在电脑前敲代码，喜欢跟一堆程序员聊天。这辈子，我也逃不出去了，深深的陷了进来......</div>
+<div style="overflow:hidden; font-family:华文楷体;">你好！我叫卞振伟，我的兴趣集中在机器人、仿真、软件工程和云原生这些领域。特别是，我对机器人仿真的完整生命周期充满了热情——从设计、通信、仿真、训练到最终的决策，每一个环节都让我着迷。我相信卧薪尝胆终有回报，虽然期间有很多的不容易，但是我都没有放弃过，学了这一行，就深深的喜欢上它。我喜欢一句话“冥冥中该来则来，无处可逃”。我喜欢上了坐在电脑前敲代码，喜欢跟一堆程序员聊天。这辈子，我也逃不出去了，深深的陷了进来......</div>
 </div>
 <div>
 <div style="width:52px;float:left; font-family:方正公文黑体;">关键词：</div> 
@@ -14,11 +13,12 @@
 
 
 
+
+
 # Work results - Introduction
 
 <center><div style='height:2mm;'></div><div style="font-size:14pt;">Zhenwei Bian, zhenweibian.sh@gmail.com</div></center>
-<center><span style="font-size:9pt;line-height:9mm"><i>Qufu Normal University, Software Engineering</i></span>
-</center>
+
 <div>
 <div style="width:82px;float:left;line-height:16pt"><b>Abstract: </b></div> 
 <div style="overflow:hidden;line-height:16pt">
@@ -28,7 +28,6 @@ Hi there! My name is Bian Zhenwei. My interests are in the fields of robotics, s
 <div style="width:82px;float:left;line-height:16pt"><b>Key Words: </b></div> 
 <div style="overflow:hidden;line-height:16pt">Robotics; Simulation; Software Engineering; Cloud Native;</div>
 </div>
-
 
 
 
@@ -261,13 +260,13 @@ Driving Assistance System Based on Deep Learning and Traditional Vision Zhenwei 
 
 演示管理员密码：1234560..
 
-软件结构见下图
-
-![](./assets/4.jpg)
-
 **演示视频**
 
 <video src="https://gitlab.com/MrVBian/Introduction/-/raw/master/%E6%96%B0%E7%89%88%E6%BC%94%E7%A4%BA%E8%A7%86%E9%A2%91.mp4" style="width: 100%; height: 100%;" controls="controls"></video>
+
+软件结构见下图
+
+![](./assets/4.jpg)
 
 ### OnlineJudge搭建及维护
 

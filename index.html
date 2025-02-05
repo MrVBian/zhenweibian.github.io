@@ -2,8 +2,7 @@
 <html>
 <head>
 <meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
-<title>卞振伟工作成果</title>
-<link rel="icon" href="./assets/B.ico" type="image/x-icon">
+
 <style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color: #ffffff; --text-color: #333333; --select-text-bg-color: #B5D6FC; --select-text-font-color: auto; --monospace: "Lucida Console",Consolas,"Courier",monospace; --title-bar-height: 20px; }
 .mac-os-11 { --title-bar-height: 28px; }
 html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
@@ -454,7 +453,7 @@ h6.md-focus:before {
 }
 
 #write {
-  counter-reset: h2 h3 h4 h5 h6;
+  counter-reset: heading-h2 heading-h3 heading-h4 heading-h5 heading-h6;
 }
 #write h1,
 #write h2,
@@ -496,61 +495,149 @@ h6.md-focus:before {
   line-height: var(--h5-font-size);
 }
 #write h1 {
-  counter-reset: h2 h3 h4 h5 h6;
+  counter-set: heading-h2 0 heading-h3 0 heading-h4 0 heading-h5 0 heading-h6 0;
 }
 #write h2 {
-  counter-reset: h3 h4 h5 h6;
+  counter-set: heading-h3 0 heading-h4 0 heading-h5 0 heading-h6 0;
 }
 #write h3 {
-  counter-reset: h4 h5 h6;
+  counter-set: heading-h4 0 heading-h5 0 heading-h6 0;
 }
 #write h4 {
-  counter-reset: h5 h6;
+  counter-set: heading-h5 0 heading-h6 0;
 }
 #write h5 {
-  counter-reset: h6;
+  counter-set: heading-h6 0;
 }
 #write h2:before, h2.md-focus.md-heading:before {
-  content: counter(h2);
-  counter-increment: h2;
+  content: counter(heading-h2);
+  counter-increment: heading-h2;
   margin-right: 1.2em;
 }
 
 #write h3:before, h3.md-focus.md-heading:before {
-  content: counter(h2) "." counter(h3);
-  counter-increment: h3;
+  content: counter(heading-h2) "." counter(heading-h3);
+  counter-increment: heading-h3;
   margin-right: 1.2em;
 }
 
 #write h4:before, h4.md-focus.md-heading:before {
-  content: counter(h2) "." counter(h3) "." counter(h4);
-  counter-increment: h4;
+  content: counter(heading-h2) "." counter(heading-h3) "." counter(heading-h4);
+  counter-increment: heading-h4;
   margin-right: 1.2em;
 }
 
 #write h5:before, h5.md-focus.md-heading:before {
-  content: counter(h2) "." counter(h3) "." counter(h4) "." counter(h5);
-  counter-increment: h5;
+  content: counter(heading-h2) "." counter(heading-h3) "." counter(heading-h4) "." counter(heading-h5);
+  counter-increment: heading-h5;
   margin-right: 1.2em;
 }
 
 #write h6:before, h6.md-focus.md-heading:before {
-  content: counter(h2) "." counter(h3) "." counter(h4) "." counter(h5) "." counter(h6);
-  counter-increment: h6;
+  content: counter(heading-h2) "." counter(heading-h3) "." counter(heading-h4) "." counter(heading-h5) "." counter(heading-h6);
+  counter-increment: heading-h6;
   margin-right: 1.2em;
 }
 
-/* 参考文献（脚注）块 */
-.footnotes {
+/* 参考文献（脚注）块，在 Typora 中的样式 */
+.md-def-footnote {
+  display: flex;
+  position: relative;
   font-size: 0.95em;
+  opacity: 1;
+  margin: 0;
+}
+.md-def-footnote:not(:first-child), .md-def-footnote + *:not(.md-def-footnote) {
+  margin-top: 1em;
+}
+.md-def-footnote + .md-def-footnote {
+  margin-top: 0.5em;
+}
+.md-def-footnote .md-def-name {
+  font-weight: inherit;
+  padding: 0;
+  flex-shrink: 0;
+  width: 3em;
+  margin-inline-start: -1ch;
+  white-space: nowrap;
+  text-align: left;
+}
+.md-def-footnote .md-def-name:before {
+  content: "［";
+  position: static;
+  color: inherit;
+}
+.md-def-footnote .md-def-name:after {
+  content: "］";
+  position: static;
+  color: inherit;
+}
+.md-def-footnote .md-reverse-footnote-area {
+  display: none;
+}
+.md-def-footnote:hover .md-reverse-footnote-area {
+  position: absolute;
+  right: -6px;
+  display: inline;
 }
 
-.footnotes-area .footnote-line {
-  color: var(--text-color);
+/* 参考文献（脚注）块，在导出 HTML 或 PDF 时的样式（导出后的 HTML tag 和 Typora 中的 HTML tag 不一致） */
+.footnotes-area {
+  padding-inline-start: 2.5em;
 }
 .footnotes-area hr {
-  border: 0;
-  color: rgba(0, 0, 0, 0);
+  display: none;
+}
+.footnotes-area .footnote-line {
+  color: var(--text-color);
+  font-size: 0.95em;
+  margin-top: 0.5em;
+}
+.footnotes-area .footnote-line *:not(.md-fn-count) {
+  display: inline-block;
+  vertical-align: top;
+}
+.footnotes-area .footnote-line span.md-fn-count {
+  font-weight: inherit;
+  padding: 0;
+  margin-inline-start: -3em;
+  white-space: nowrap;
+  display: inline-block;
+  width: 2.5em;
+}
+.footnotes-area .footnote-line span.md-fn-count:before {
+  content: "［";
+  position: static;
+  color: inherit;
+}
+.footnotes-area .footnote-line span.md-fn-count:after {
+  content: "］";
+  position: static;
+  color: inherit;
+}
+.footnotes-area .footnote-line a.reversefootnote {
+  display: none;
+}
+
+/* 参考文献（脚注）上标 */
+sup.md-footnote {
+  display: inline;
+  padding: 0;
+  margin: 0;
+  background: transparent;
+  color: inherit;
+}
+sup.md-footnote a {
+  color: inherit !important;
+}
+sup.md-footnote:not(.md-expand) {
+  margin-inline: -0.44em;
+}
+sup.md-footnote:not(.md-expand):before {
+  content: "［";
+}
+sup.md-footnote:not(.md-expand):after {
+  content: "］";
 }
 
 /* 无序列表 */
@@ -724,7 +811,7 @@ li code {
 .md-toc-content {
   margin-left: 2em;
   /* 修复缺失上级标题时无法递增 */
-  counter-reset: toc-h2 toc-h3 toc-h4;
+  counter-reset: toc-h2 toc-h3 toc-h4 toc-h5 toc-h6;
   break-after: page;
 }
 
@@ -754,19 +841,19 @@ li code {
 /* 目录标题前 */
 .md-toc-content .md-toc-h1 {
   display: var(--toc-show-title);
-  counter-reset: toc-h2 toc-h3 toc-h4 toc-h5 toc-h6;
+  counter-set: toc-h2 0 toc-h3 0 toc-h4 0 toc-h5 0 toc-h6 0;
 }
 .md-toc-content .md-toc-h2 {
-  counter-reset: toc-h3 toc-h4 toc-h5 toc-h6;
+  counter-set: toc-h3 0 toc-h4 0 toc-h5 0 toc-h6 0;
 }
 .md-toc-content .md-toc-h3 {
-  counter-reset: toc-h4 toc-h5 toc-h6;
+  counter-set: toc-h4 0 toc-h5 0 toc-h6 0;
 }
 .md-toc-content .md-toc-h4 {
-  counter-reset: toc-h5 toc-h6;
+  counter-set: toc-h5 0 toc-h6 0;
 }
 .md-toc-content .md-toc-h5 {
-  counter-reset: toc-h6;
+  counter-set: toc-h6 0;
 }
 .md-toc-content .md-toc-h2:before {
   counter-increment: toc-h2;
@@ -804,20 +891,14 @@ li code {
 </style><title>index</title>
 </head>
 <body class='typora-export'><div class='typora-export-content'>
-<div id='write'  class=''><h1 id='工作成果---介绍'><span>工作成果 - 介绍</span></h1><center><div style='height:2mm;'></div><div style="font-family:华文楷体;font-size:14pt;">卞振伟，zhenweibian.sh@gmail.com</div></center>
-<center><span style="font-family:华文楷体;font-size:9pt;line-height:9mm">曲阜师范大学，软件工程，本科</span>
-</center>
-<div>
+<div id='write'  class=''><h1 id='工作成果---介绍'><span>工作成果 - 介绍</span></h1><center><div style='height:2mm;'></div><div style="font-family:华文楷体;font-size:14pt;">卞振伟，zhenweibian.sh@gmail.com</div></center><div>
 <div style="width:52px;float:left; font-family:方正公文黑体;">摘　要：</div> 
-<div style="overflow:hidden; font-family:华文楷体;">你好！我叫卞振伟，我的兴趣集中在机器人、仿真和软件工程、云原生这些领域。特别是，我对机器人仿真的完整生命周期充满了热情——从设计、通信、仿真、训练到最终的决策，每一个环节都让我着迷。我相信卧薪尝胆终有回报，虽然期间有很多的不容易，但是我都没有放弃过，学了这一行，就深深的喜欢上它。我喜欢一句话“冥冥中该来则来，无处可逃”。我喜欢上了坐在电脑前敲代码，喜欢跟一堆程序员聊天。这辈子，我也逃不出去了，深深的陷了进来......</div>
+<div style="overflow:hidden; font-family:华文楷体;">你好！我叫卞振伟，我的兴趣集中在机器人、仿真、软件工程和云原生这些领域。特别是，我对机器人仿真的完整生命周期充满了热情——从设计、通信、仿真、训练到最终的决策，每一个环节都让我着迷。我相信卧薪尝胆终有回报，虽然期间有很多的不容易，但是我都没有放弃过，学了这一行，就深深的喜欢上它。我喜欢一句话“冥冥中该来则来，无处可逃”。我喜欢上了坐在电脑前敲代码，喜欢跟一堆程序员聊天。这辈子，我也逃不出去了，深深的陷了进来......</div>
 </div>
 <div>
 <div style="width:52px;float:left; font-family:方正公文黑体;">关键词：</div> 
 <div style="overflow:hidden; font-family:华文楷体;">机器人；仿真；软件工程；云原生；</div>
-</div><p>&nbsp;</p><h1 id='work-results---introduction'><span>Work results - Introduction</span></h1><center><div style='height:2mm;'></div><div style="font-size:14pt;">Zhenwei Bian</div></center>
-<center><span style="font-size:9pt;line-height:9mm"><i>Qufu Normal University, Software Engineering</i></span>
-</center>
-<div>
+</div><p>&nbsp;</p><p>&nbsp;</p><h1 id='work-results---introduction'><span>Work results - Introduction</span></h1><center><div style='height:2mm;'></div><div style="font-size:14pt;">Zhenwei Bian, zhenweibian.sh@gmail.com</div></center><div>
 <div style="width:82px;float:left;line-height:16pt"><b>Abstract: </b></div> 
 <div style="overflow:hidden;line-height:16pt">
 Hi there! My name is Bian Zhenwei. My interests are in the fields of robotics, simulation, software engineering, and cluster management. In particular, I am passionate about the complete life cycle of robot simulation - from design, communication, modeling, training to final decision-making, every link fascinates me. I believe that hard work will eventually pay off. Although there were many difficulties during the period, I never gave up. After learning this line, I fell in love with it deeply. I like the saying "What is destined to come will come, and there is no escape." I like sitting in front of the computer and typing code, and I like chatting with a bunch of programmers. In this life, I can't escape, and I am deeply trapped in it...</div>
@@ -825,7 +906,7 @@ Hi there! My name is Bian Zhenwei. My interests are in the fields of robotics, s
 <div>
 <div style="width:82px;float:left;line-height:16pt"><b>Key Words: </b></div> 
 <div style="overflow:hidden;line-height:16pt">Robotics; Simulation; Software Engineering; Cloud Native;</div>
-</div><p>&nbsp;</p><p><strong><span>目录结构</span></strong><span>：</span></p><div class='md-toc' mdtype='toc'><p class="md-toc-content" role="list"><span role="listitem" class="md-toc-item md-toc-h1" data-ref="n0"><a class="md-toc-inner" href="#工作成果---介绍">工作成果 - 介绍</a></span><span role="listitem" class="md-toc-item md-toc-h1" data-ref="n8"><a class="md-toc-inner" href="#work-results---introduction">Work results - Introduction</a></span><span role="listitem" class="md-toc-item md-toc-h1" data-ref="n17"><a class="md-toc-inner" href="#工作成果">工作成果</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n18"><a class="md-toc-inner" href="#2024-5-至今-xx公司">2024-5 至今 XX公司</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n19"><a class="md-toc-inner" href="#isaac仿真平台搭建及机器人训练">Isaac仿真平台搭建及机器人训练</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n22"><a class="md-toc-inner" href="#ros2上位机软件">ROS2上位机软件</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n25"><a class="md-toc-inner" href="#机器人数据存储及可视化">机器人数据存储及可视化</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n29"><a class="md-toc-inner" href="#机器人遥操webgl">机器人遥操WebGL</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n32"><a class="md-toc-inner" href="#gazebo仿真">Gazebo仿真</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n35"><a class="md-toc-inner" href="#2020-12-至-2024-4-视比特机器人有限公司">2020-12 至 2024-4 视比特机器人有限公司</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n36"><a class="md-toc-inner" href="#仿真软件开发">仿真软件开发</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n41"><a class="md-toc-inner" href="#离散事件仿真软件">离散事件仿真软件</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n45"><a class="md-toc-inner" href="#焊接虚拟调试工艺包">焊接虚拟调试工艺包</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n48"><a class="md-toc-inner" href="#上下料单栈虚拟研发">上下料单栈虚拟研发</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n51"><a class="md-toc-inner" href="#中联长沙分拣线虚拟调试">中联长沙分拣线虚拟调试</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n54"><a class="md-toc-inner" href="#仿真软件内场景构建">仿真软件内场景构建</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n57"><a class="md-toc-inner" href="#上海展厅虚实同步-5x">上海展厅虚实同步 5x</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n60"><a class="md-toc-inner" href="#机器人编程流程图编程">机器人编程(流程图编程)</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n63"><a class="md-toc-inner" href="#服务器算力集群搭建">服务器算力集群搭建</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n73"><a class="md-toc-inner" href="#借助vrep进行sim2real码垛仿真">借助Vrep进行Sim2real码垛仿真</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n76"><a class="md-toc-inner" href="#ros1-rviz-插件编写">ROS1 Rviz 插件编写</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n79"><a class="md-toc-inner" href="#ros1-flow-based-programming">ROS1 flow based programming</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n82"><a class="md-toc-inner" href="#pcl点云库">PCL点云库</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n85"><a class="md-toc-inner" href="#在校成果">在校成果</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n86"><a class="md-toc-inner" href="#论文">论文</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n94"><a class="md-toc-inner" href="#荣誉成绩">荣誉成绩</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n114"><a class="md-toc-inner" href="#基于计算机视觉的辅助驾驶系统">基于计算机视觉的辅助驾驶系统</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n137"><a class="md-toc-inner" href="#综合测评网站">综合测评网站</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n152"><a class="md-toc-inner" href="#onlinejudge搭建及维护">OnlineJudge搭建及维护</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n166"><a class="md-toc-inner" href="#算法与数据结构在校编程竞赛经历">算法与数据结构(在校编程竞赛经历)</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n189"><a class="md-toc-inner" href="#linux终端爱好者">Linux终端爱好者</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n196"><a class="md-toc-inner" href="#机器学习和深度学习">机器学习和深度学习</a></span></p></div><h1 id='工作成果'><span>工作成果</span></h1><h2 id='2024-5-至今-xx公司'><span>2024-5 至今 XX公司</span></h2><h3 id='isaac仿真平台搭建及机器人训练'><span>Isaac仿真平台搭建及机器人训练</span></h3><p><strong><span>开发角色：</span></strong><span>个人</span>
+</div><p>&nbsp;</p><p><strong><span>目录结构</span></strong><span>：</span></p><div class='md-toc' mdtype='toc'><p class="md-toc-content" role="list"><span role="listitem" class="md-toc-item md-toc-h1" data-ref="n0"><a class="md-toc-inner" href="#工作成果---介绍">工作成果 - 介绍</a></span><span role="listitem" class="md-toc-item md-toc-h1" data-ref="n8"><a class="md-toc-inner" href="#work-results---introduction">Work results - Introduction</a></span><span role="listitem" class="md-toc-item md-toc-h1" data-ref="n16"><a class="md-toc-inner" href="#工作成果">工作成果</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n17"><a class="md-toc-inner" href="#2024-5-至今-xx公司">2024-5 至今 XX公司</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n18"><a class="md-toc-inner" href="#isaac仿真平台搭建及机器人训练">Isaac仿真平台搭建及机器人训练</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n21"><a class="md-toc-inner" href="#ros2上位机软件">ROS2上位机软件</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n24"><a class="md-toc-inner" href="#机器人数据存储及可视化">机器人数据存储及可视化</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n28"><a class="md-toc-inner" href="#机器人遥操webgl">机器人遥操WebGL</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n31"><a class="md-toc-inner" href="#gazebo仿真">Gazebo仿真</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n34"><a class="md-toc-inner" href="#2020-12-至-2024-4-视比特机器人有限公司">2020-12 至 2024-4 视比特机器人有限公司</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n35"><a class="md-toc-inner" href="#仿真软件开发">仿真软件开发</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n40"><a class="md-toc-inner" href="#离散事件仿真软件">离散事件仿真软件</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n44"><a class="md-toc-inner" href="#焊接虚拟调试工艺包">焊接虚拟调试工艺包</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n47"><a class="md-toc-inner" href="#上下料单栈虚拟研发">上下料单栈虚拟研发</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n50"><a class="md-toc-inner" href="#中联长沙分拣线虚拟调试">中联长沙分拣线虚拟调试</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n53"><a class="md-toc-inner" href="#仿真软件内场景构建">仿真软件内场景构建</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n56"><a class="md-toc-inner" href="#上海展厅虚实同步-5x">上海展厅虚实同步 5x</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n59"><a class="md-toc-inner" href="#机器人编程流程图编程">机器人编程(流程图编程)</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n62"><a class="md-toc-inner" href="#服务器算力集群搭建">服务器算力集群搭建</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n72"><a class="md-toc-inner" href="#借助vrep进行sim2real码垛仿真">借助Vrep进行Sim2real码垛仿真</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n75"><a class="md-toc-inner" href="#ros1-rviz-插件编写">ROS1 Rviz 插件编写</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n78"><a class="md-toc-inner" href="#ros1-flow-based-programming">ROS1 flow based programming</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n81"><a class="md-toc-inner" href="#pcl点云库">PCL点云库</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n84"><a class="md-toc-inner" href="#在校成果">在校成果</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n85"><a class="md-toc-inner" href="#论文">论文</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n93"><a class="md-toc-inner" href="#荣誉成绩">荣誉成绩</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n113"><a class="md-toc-inner" href="#基于计算机视觉的辅助驾驶系统">基于计算机视觉的辅助驾驶系统</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n136"><a class="md-toc-inner" href="#综合测评网站">综合测评网站</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n151"><a class="md-toc-inner" href="#onlinejudge搭建及维护">OnlineJudge搭建及维护</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n165"><a class="md-toc-inner" href="#算法与数据结构在校编程竞赛经历">算法与数据结构(在校编程竞赛经历)</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n188"><a class="md-toc-inner" href="#linux终端爱好者">Linux终端爱好者</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n195"><a class="md-toc-inner" href="#机器学习和深度学习">机器学习和深度学习</a></span></p></div><h1 id='工作成果'><span>工作成果</span></h1><h2 id='2024-5-至今-xx公司'><span>2024-5 至今 XX公司</span></h2><h3 id='isaac仿真平台搭建及机器人训练'><span>Isaac仿真平台搭建及机器人训练</span></h3><p><strong><span>开发角色：</span></strong><span>个人</span>
 <strong><span>业务目标：</span></strong><span>运动学、动力学、虚拟视觉仿真</span></p><video src="./videos/20241118Isaac%E5%B1%95%E7%A4%BA.mp4" style="width: 100%; height: 100%;" controls="controls"></video><h3 id='ros2上位机软件'><span>ROS2上位机软件</span></h3><p><strong><span>开发角色：</span></strong><span>个人</span>
 <strong><span>业务目标：</span></strong><span>上位机软件，URDF模型制作</span></p><video src="https://gitlab.com/MrVBian/Introduction/-/raw/master/20241009%E4%B8%8A%E4%BD%8D%E6%9C%BA%E5%8A%9F%E8%83%BD%E5%B1%95%E7%A4%BA.mp4" style="width: 100%; height: 100%;" controls="controls"></video><h3 id='机器人数据存储及可视化'><span>机器人数据存储及可视化</span></h3><p><strong><span>开发角色：</span></strong><span>个人</span>
 <strong><span>业务目标：</span></strong><span>基于时序数据库(InfluxDB)、ROS2、Grafana，实现机器人数据数采存储及数据可视化</span></p><video src="https://gitlab.com/MrVBian/Introduction/-/raw/94cc1200a6bda16db76ef5575080ca0795c0acec/20241010%E6%97%B6%E5%BA%8F%E6%95%B0%E9%87%87.mp4" style="width: 100%; height: 100%;" controls="controls"></video><h3 id='机器人遥操webgl'><span>机器人遥操WebGL</span></h3><p><strong><span>开发角色：</span></strong><span>个人</span>
@@ -859,6 +940,6 @@ Hi there! My name is Bian Zhenwei. My interests are in the fields of robotics, s
 <span>2.3 </span><strong><span>减少偏差：围绕增加隐藏层神经元个数和加深神经网络等方式做优化。减少方差：围绕获取更多训练数据（数据增强）、正则化、Dropout等方式做优化。</span></strong></p></li></ol></li><li><ol start='3' ><li><p><span>后期：</span>
 <span>3.1 做</span><strong><span>误差分析</span></strong><span>。</span>
 <span>3.2 </span><strong><span>评估人类表现水平、当前准确率、方差和偏差的值</span></strong><span>，决定下一步优化方向。</span>
-<span>3.3 </span><strong><span>计算不同情况误预测占所有误预测的比例</span></strong><span>，决定是否有必要针对某一情况做优化。</span></p></li></ol></li></ul><p><img src="./assets/7.gif" referrerpolicy="no-referrer"></p><p><strong><span>论文</span></strong></p><p><strong><span>topic：Driving Assistance System Based on Deep Learning and Traditional Vision</span></strong></p><p><strong><span>Abstract.</span></strong><span> Relevant technologies such as computer vision and artificial intelligence are cheaper and easier to implement than detection technologies implemented by hardware such as lidar and radar. Cars are equipped with advanced intelligent driving assistance systems to prevent or reduce traffic accidents. In this context, this paper will identify and analyze the most important traffic lights, vehicles, and lane lines in traffic. Based on ImageNet pre-training, SqueezeNet builds fine-tuned network recognition traffic lights. Aims to achieve an assisted driving system that integrates deep learning and traditional vision. The final model size is only 7.84MB, the recognition accuracy is as high as 94.95%, and the processing speed is 12.4ms / frame. The single-frame processing speed of recognizer of YOLO v3 trained vehicle and classifier of B-CNN trained vehicle is up to 24.47ms. Using computer vision and mathematical operations, image perspective transformation, and polynomial fitting to analyze lane lines has the advantage of reducing cost.</span></p><p><strong><span>Keyword：Assisted driving ImageNet SqueezeNet YOLO v3 B-CNN</span></strong></p><p><span>Driving Assistance System Based on Deep Learning and Traditional Vision Zhenwei Bian, Tao Yu, Xin Zhang, Xiaoyan GongYe, CSA2020. China Conference</span></p><p><img src="./assets/8.gif" referrerpolicy="no-referrer"></p><h3 id='综合测评网站'><span>综合测评网站</span></h3><p><span>作用：信息化统计审核量化分，部署供学院使用</span></p><p><span>共经历两次版本迭代：</span></p><p><span>版本一：我担任团队负责人，负责完全</span><strong><span>实现后端</span></strong><span>内容（基于Flask框架开发），并</span><strong><span>负责合并所有模块作最后项目部署和演示</span></strong><span>。共六人开发团队，使用由我</span><strong><span>搭建在个人服务器上SVN进行协作开发</span></strong><span>。</span></p><p><span>版本二：我担任团队负责人，负责完全</span><strong><span>实现前端内容及网站性能测试</span></strong><span>。共五人开发团队，</span><strong><span>担任队长</span></strong><span>，</span><strong><span>使用Git协作开发</span></strong><span>。</span></p><p><strong><span>在线访问地址：</span><del><a href='http://www.ablative.cn/lianghua/login' title='学生界面(已下线)'><span>学生界面</span></a></del></strong><span>(电脑版已下线)</span></p><p><span>演示学生账号：2017416000</span></p><p><span>演示学生密码：1234560..</span></p><p><strong><span>在线访问地址：</span><del><a href='http://test.ablative.cn/#/login?redirect=%2Fdashboard' title='管理员界面'><span>管理员界面</span></a></del></strong><span>(已下线)</span></p><p><span>演示管理员账号：admin</span></p><p><span>演示管理员密码：1234560..</span></p><p><span>软件结构见下图</span></p><p><img src="./assets/4.jpg" referrerpolicy="no-referrer"></p><p><strong><span>演示视频</span></strong></p><video src="https://gitlab.com/MrVBian/Introduction/-/raw/master/%E6%96%B0%E7%89%88%E6%BC%94%E7%A4%BA%E8%A7%86%E9%A2%91.mp4" style="width: 100%; height: 100%;" controls="controls"></video><h3 id='onlinejudge搭建及维护'><span>OnlineJudge搭建及维护</span></h3><p><span>我</span><strong><span>负责OnlineJudge搭建及维护</span></strong><span>，</span><strong><span>协助老师编写题目和测试用例</span></strong></p><ul><li><p><span>已有521在校生使用</span></p></li><li><p><span>已有493道题目及我们生成的测试数据</span></p></li><li><p><span>针对蓝桥杯第三届、第四届、第五届和第六届C/C++组和Java组题目，协助老师编写题目答案和题目解析</span></p></li><li><p><span>协助老师组织寒假蓝桥杯训练，作为管理员身份将蓝桥杯题目出在我们的OnlineJudge平台，并设计出测试用例，供学生训练</span></p></li><li><p><span>在蓝桥杯寒假训练期间，接受学生反馈，历经一个月时间不断修复完善，满足了蓝桥杯训练要求。</span></p></li></ul><p><img src="./assets/5.png" referrerpolicy="no-referrer"></p><h3 id='算法与数据结构在校编程竞赛经历'><span>算法与数据结构(在校编程竞赛经历)</span></h3><ul><li><p><span>编程语言：C++</span></p></li><li><p><span>两年半的ACM训练期间，</span><strong><span>以图论为主，主要负责解决搜索问题、最短路问题、并查集问题、最小生成树问题、生成树问题、连通图问题、网络流问题、动态规划问题</span></strong><span>。在校期间参与</span><strong><span>复旦大学吴永辉副教授数论培训</span></strong><span>，</span><strong><span>了解绝大多数数论问题原理</span></strong><span>。</span></p></li><li><p><span>我的ACM算法知识图如下：</span></p></li></ul><p><img src="./assets/9.png" referrerpolicy="no-referrer"></p><p><strong><center><a href='https://www.showdoc.com.cn/2268929339968005/10173021707270207' title='题解笔记'><span>题解笔记</span></a></center></strong></p><p><img src="./assets/10.png" referrerpolicy="no-referrer"></p><p><strong><span>组织创办程序竞赛协会</span></strong></p><ul><li><p><span>创办程序竞赛协会并担任2018届首届会长，负责协会运营、活动场地申请。</span></p></li><li><p><span>组织大一新生C语言培训，平均每场80人次，共组织三场，参与四场（换届后参与一次培训）。</span></p></li><li><p><span>开设算法讲堂活动，组织由高年级对低年级的算法培训，平均每场六十多人，共举办7期，主题分别为二分法、DFS、逆元与二次幂、并查集、AC自动机、排列组合和BFPRT。</span></p></li><li><p><span>以主讲人身份参与了多次六十人以上协会算法培训，提高了同学们对算法的热情。</span></p></li><li><p><span>组织举办两场面向软件学院同学的程序设计竞赛，参与人员总数超过一百五十人，搭建局域网OnlineJudge，四台学院计算机作服务器进行负载均衡。</span></p></li></ul><h3 id='linux终端爱好者'><span>Linux终端爱好者</span></h3><ul><li><p><span>终端开发爱好者，以neovim为主编辑器，ranger、tmux、fzf等终端工具进行开发。</span></p></li></ul><p><strong><center><a href='https://github.com/MrVBian/nvim' title='https://github.com/MrVBian/nvim'><span>https://github.com/MrVBian/nvim</span></a></center></strong></p><p><img src="./assets/14.gif" referrerpolicy="no-referrer"></p><p><img src="./assets/11.gif" referrerpolicy="no-referrer"></p><h3 id='机器学习和深度学习'><span>机器学习和深度学习</span></h3><ul><li><p><span>掌握机器学习和深度学习基础知识，认真学完了</span><strong><span>吴恩达-斯坦福CS229机器学习课程</span></strong><span>和</span><strong><span>吴恩达-斯坦福CS230深度学习课程</span></strong><span>，并做了详细手写笔记，其中机器学习8页（只做了部分笔记），深度学习53页。</span></p></li><li><p><span>已</span><strong><span>了解部分常见网络结构及原理</span></strong><span>。例如卷积神经网络的LeNet、AlexNet、VGG、resNet、Inception网络和YOLO等常见网络。循环神经网络掌握GRU和LSTM等基础知识，没有具体项目实践经验。</span></p></li><li><p><span>能够进行数据处理和可视化：</span><strong><span>掌握matplotlib、pandas、seaborn和numpy等python库使用</span></strong><span>。</span></p></li><li><p><span>熟悉计算机视觉库</span><strong><span>Opencv</span></strong><span>的C++开发和Python开发。</span></p></li></ul><p><strong><span>机器学习和深度学习思维导图：</span></strong></p><p><a href='https://mrvbian.github.io/zhenweibian.github.io/MlAndDl.html' title='https://mrvbian.github.io/zhenweibian.github.io/MlAndDl.html'><span>https://mrvbian.github.io/zhenweibian.github.io/MlAndDl.html</span></a></p><p><img src="./assets/15.png" referrerpolicy="no-referrer"></p></div></div>
+<span>3.3 </span><strong><span>计算不同情况误预测占所有误预测的比例</span></strong><span>，决定是否有必要针对某一情况做优化。</span></p></li></ol></li></ul><p><img src="./assets/7.gif" referrerpolicy="no-referrer"></p><p><strong><span>论文</span></strong></p><p><strong><span>topic：Driving Assistance System Based on Deep Learning and Traditional Vision</span></strong></p><p><strong><span>Abstract.</span></strong><span> Relevant technologies such as computer vision and artificial intelligence are cheaper and easier to implement than detection technologies implemented by hardware such as lidar and radar. Cars are equipped with advanced intelligent driving assistance systems to prevent or reduce traffic accidents. In this context, this paper will identify and analyze the most important traffic lights, vehicles, and lane lines in traffic. Based on ImageNet pre-training, SqueezeNet builds fine-tuned network recognition traffic lights. Aims to achieve an assisted driving system that integrates deep learning and traditional vision. The final model size is only 7.84MB, the recognition accuracy is as high as 94.95%, and the processing speed is 12.4ms / frame. The single-frame processing speed of recognizer of YOLO v3 trained vehicle and classifier of B-CNN trained vehicle is up to 24.47ms. Using computer vision and mathematical operations, image perspective transformation, and polynomial fitting to analyze lane lines has the advantage of reducing cost.</span></p><p><strong><span>Keyword：Assisted driving ImageNet SqueezeNet YOLO v3 B-CNN</span></strong></p><p><span>Driving Assistance System Based on Deep Learning and Traditional Vision Zhenwei Bian, Tao Yu, Xin Zhang, Xiaoyan GongYe, CSA2020. China Conference</span></p><p><img src="./assets/8.gif" referrerpolicy="no-referrer"></p><h3 id='综合测评网站'><span>综合测评网站</span></h3><p><span>作用：信息化统计审核量化分，部署供学院使用</span></p><p><span>共经历两次版本迭代：</span></p><p><span>版本一：我担任团队负责人，负责完全</span><strong><span>实现后端</span></strong><span>内容（基于Flask框架开发），并</span><strong><span>负责合并所有模块作最后项目部署和演示</span></strong><span>。共六人开发团队，使用由我</span><strong><span>搭建在个人服务器上SVN进行协作开发</span></strong><span>。</span></p><p><span>版本二：我担任团队负责人，负责完全</span><strong><span>实现前端内容及网站性能测试</span></strong><span>。共五人开发团队，</span><strong><span>担任队长</span></strong><span>，</span><strong><span>使用Git协作开发</span></strong><span>。</span></p><p><strong><span>在线访问地址：</span><del><a href='http://www.ablative.cn/lianghua/login' title='学生界面(已下线)'><span>学生界面</span></a></del></strong><span>(电脑版已下线)</span></p><p><span>演示学生账号：2017416000</span></p><p><span>演示学生密码：1234560..</span></p><p><strong><span>在线访问地址：</span><del><a href='http://test.ablative.cn/#/login?redirect=%2Fdashboard' title='管理员界面'><span>管理员界面</span></a></del></strong><span>(已下线)</span></p><p><span>演示管理员账号：admin</span></p><p><span>演示管理员密码：1234560..</span></p><p><strong><span>演示视频</span></strong></p><video src="https://gitlab.com/MrVBian/Introduction/-/raw/master/%E6%96%B0%E7%89%88%E6%BC%94%E7%A4%BA%E8%A7%86%E9%A2%91.mp4" style="width: 100%; height: 100%;" controls="controls"></video><p><span>软件结构见下图</span></p><p><img src="./assets/4.jpg" referrerpolicy="no-referrer"></p><h3 id='onlinejudge搭建及维护'><span>OnlineJudge搭建及维护</span></h3><p><span>我</span><strong><span>负责OnlineJudge搭建及维护</span></strong><span>，</span><strong><span>协助老师编写题目和测试用例</span></strong></p><ul><li><p><span>已有521在校生使用</span></p></li><li><p><span>已有493道题目及我们生成的测试数据</span></p></li><li><p><span>针对蓝桥杯第三届、第四届、第五届和第六届C/C++组和Java组题目，协助老师编写题目答案和题目解析</span></p></li><li><p><span>协助老师组织寒假蓝桥杯训练，作为管理员身份将蓝桥杯题目出在我们的OnlineJudge平台，并设计出测试用例，供学生训练</span></p></li><li><p><span>在蓝桥杯寒假训练期间，接受学生反馈，历经一个月时间不断修复完善，满足了蓝桥杯训练要求。</span></p></li></ul><p><img src="./assets/5.png" referrerpolicy="no-referrer"></p><h3 id='算法与数据结构在校编程竞赛经历'><span>算法与数据结构(在校编程竞赛经历)</span></h3><ul><li><p><span>编程语言：C++</span></p></li><li><p><span>两年半的ACM训练期间，</span><strong><span>以图论为主，主要负责解决搜索问题、最短路问题、并查集问题、最小生成树问题、生成树问题、连通图问题、网络流问题、动态规划问题</span></strong><span>。在校期间参与</span><strong><span>复旦大学吴永辉副教授数论培训</span></strong><span>，</span><strong><span>了解绝大多数数论问题原理</span></strong><span>。</span></p></li><li><p><span>我的ACM算法知识图如下：</span></p></li></ul><p><img src="./assets/9.png" referrerpolicy="no-referrer"></p><p><strong><center><a href='https://www.showdoc.com.cn/2268929339968005/10173021707270207' title='题解笔记'><span>题解笔记</span></a></center></strong></p><p><img src="./assets/10.png" referrerpolicy="no-referrer"></p><p><strong><span>组织创办程序竞赛协会</span></strong></p><ul><li><p><span>创办程序竞赛协会并担任2018届首届会长，负责协会运营、活动场地申请。</span></p></li><li><p><span>组织大一新生C语言培训，平均每场80人次，共组织三场，参与四场（换届后参与一次培训）。</span></p></li><li><p><span>开设算法讲堂活动，组织由高年级对低年级的算法培训，平均每场六十多人，共举办7期，主题分别为二分法、DFS、逆元与二次幂、并查集、AC自动机、排列组合和BFPRT。</span></p></li><li><p><span>以主讲人身份参与了多次六十人以上协会算法培训，提高了同学们对算法的热情。</span></p></li><li><p><span>组织举办两场面向软件学院同学的程序设计竞赛，参与人员总数超过一百五十人，搭建局域网OnlineJudge，四台学院计算机作服务器进行负载均衡。</span></p></li></ul><h3 id='linux终端爱好者'><span>Linux终端爱好者</span></h3><ul><li><p><span>终端开发爱好者，以neovim为主编辑器，ranger、tmux、fzf等终端工具进行开发。</span></p></li></ul><p><strong><center><a href='https://github.com/MrVBian/nvim' title='https://github.com/MrVBian/nvim'><span>https://github.com/MrVBian/nvim</span></a></center></strong></p><p><img src="./assets/14.gif" referrerpolicy="no-referrer"></p><p><img src="./assets/11.gif" referrerpolicy="no-referrer"></p><h3 id='机器学习和深度学习'><span>机器学习和深度学习</span></h3><ul><li><p><span>掌握机器学习和深度学习基础知识，认真学完了</span><strong><span>吴恩达-斯坦福CS229机器学习课程</span></strong><span>和</span><strong><span>吴恩达-斯坦福CS230深度学习课程</span></strong><span>，并做了详细手写笔记，其中机器学习8页（只做了部分笔记），深度学习53页。</span></p></li><li><p><span>已</span><strong><span>了解部分常见网络结构及原理</span></strong><span>。例如卷积神经网络的LeNet、AlexNet、VGG、resNet、Inception网络和YOLO等常见网络。循环神经网络掌握GRU和LSTM等基础知识，没有具体项目实践经验。</span></p></li><li><p><span>能够进行数据处理和可视化：</span><strong><span>掌握matplotlib、pandas、seaborn和numpy等python库使用</span></strong><span>。</span></p></li><li><p><span>熟悉计算机视觉库</span><strong><span>Opencv</span></strong><span>的C++开发和Python开发。</span></p></li></ul><p><strong><span>机器学习和深度学习思维导图：</span></strong></p><p><a href='https://mrvbian.github.io/zhenweibian.github.io/MlAndDl.html' title='https://mrvbian.github.io/zhenweibian.github.io/MlAndDl.html'><span>https://mrvbian.github.io/zhenweibian.github.io/MlAndDl.html</span></a></p><p><img src="./assets/15.png" referrerpolicy="no-referrer"></p></div></div>
 </body>
 </html>
