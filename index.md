@@ -46,9 +46,11 @@ Hi there! My name is Bian Zhenwei. My interests are in the fields of robotics, s
 ### Isaac仿真平台搭建及机器人训练
 
 **开发角色：**个人
-**业务目标：**运动学、动力学、虚拟视觉仿真
+**业务目标：**运动学和动力学(关节、轮子、手指)、视觉仿真、物理引擎、训练
 
 <video src="./videos/20241118Isaac%E5%B1%95%E7%A4%BA.mp4" style="width: 100%; height: 100%;" controls="controls"></video>
+
+<video src="./videos/20250212%E5%A4%9A%E6%9C%BA%E5%99%A8%E4%BA%BA%E8%AE%AD%E7%BB%83.mp4" style="width: 100%; height: 100%;" controls="controls"></video>
 
 ### ROS2上位机软件
 
