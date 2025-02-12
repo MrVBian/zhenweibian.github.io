@@ -55,7 +55,8 @@ Hi there! My name is Bian Zhenwei. My interests are in the fields of robotics, s
 ### ROS2上位机软件
 
 **开发角色：**个人
-**业务目标：**上位机软件，URDF模型制作
+**业务目标：**上位机软件(数采、控制、离线编程)
+**技术方案：**C++、QT、ROS2
 
 <video src="https://gitlab.com/MrVBian/Introduction/-/raw/master/20241009%E4%B8%8A%E4%BD%8D%E6%9C%BA%E5%8A%9F%E8%83%BD%E5%B1%95%E7%A4%BA.mp4" style="width: 100%; height: 100%;" controls="controls"></video>
 
@@ -70,7 +71,8 @@ Hi there! My name is Bian Zhenwei. My interests are in the fields of robotics, s
 ### 机器人遥操WebGL
 
 **开发角色：**个人
-**业务目标：**ROS2、WebSocket、Unity，辅助机器人遥操
+**业务目标：**Web页面辅助用户机器人遥操
+**技术方案：**ROS2、WebSocket、Unity、Nginx
 
 <video src="https://gitlab.com/MrVBian/Introduction/-/raw/94cc1200a6bda16db76ef5575080ca0795c0acec/20241010WebGL%E5%8A%9F%E8%83%BD%E5%B1%95%E7%A4%BA.mp4" style="width: 100%; height: 100%;" controls="controls"></video>
 
