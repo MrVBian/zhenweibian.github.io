@@ -47,6 +47,7 @@ Hi there! My name is Bian Zhenwei. My interests are in the fields of robotics, s
 
 **开发角色：**个人
 **业务目标：**运动学和动力学(关节、轮子、手指)、视觉仿真、物理引擎、训练
+**技术方案**：Python、C++
 
 <video src="./videos/20241118Isaac%E5%B1%95%E7%A4%BA.mp4" style="width: 100%; height: 100%;" controls="controls"></video>
 
@@ -60,10 +61,21 @@ Hi there! My name is Bian Zhenwei. My interests are in the fields of robotics, s
 
 <video src="https://gitlab.com/MrVBian/Introduction/-/raw/master/20241009%E4%B8%8A%E4%BD%8D%E6%9C%BA%E5%8A%9F%E8%83%BD%E5%B1%95%E7%A4%BA.mp4" style="width: 100%; height: 100%;" controls="controls"></video>
 
+### 电机驱动软件
+
+**开发角色：**个人
+**业务目标：**基于串口通信协议，完成电机参数读写及辅助调试功能。集成高性能示波器模块，支持 20000Hz (50ms) 采样频率的数据采集与实时绘图。示波器支持鼠标交互操作和多图表同X轴绘制，并具备基于大容量数据的 X/Y 轴自动缩放能力。
+**技术方案**：C++、QT
+
+![](./assets/FuturMFD1.png)
+
+![](./assets/FuturMFD2.png)
+
 ### 机器人数据存储及可视化
 
 **开发角色：**个人
 **业务目标：**基于时序数据库(InfluxDB)、ROS2、Grafana，实现机器人数据数采存储及数据可视化
+**技术方案**：Python、ROS2
 
 <video src="https://gitlab.com/MrVBian/Introduction/-/raw/94cc1200a6bda16db76ef5575080ca0795c0acec/20241010%E6%97%B6%E5%BA%8F%E6%95%B0%E9%87%87.mp4" style="width: 100%; height: 100%;" controls="controls"></video>
 
@@ -75,6 +87,14 @@ Hi there! My name is Bian Zhenwei. My interests are in the fields of robotics, s
 **技术方案：**ROS2、WebSocket、Unity、Nginx
 
 <video src="https://gitlab.com/MrVBian/Introduction/-/raw/94cc1200a6bda16db76ef5575080ca0795c0acec/20241010WebGL%E5%8A%9F%E8%83%BD%E5%B1%95%E7%A4%BA.mp4" style="width: 100%; height: 100%;" controls="controls"></video>
+
+### 三维遥操辅助平台(Linux)
+
+**开发角色：**两人
+**业务目标：** 提升用户空间感知能力，辅助高效远程操作（遥操），提供智能视图增强、三维环境重建、机器人状态监控与遥操交互引导功能；支持基于大文件三维重建点云的**实时碰撞检测**并预警碰撞距离。
+**技术方案：**Unity、ROS2
+
+![](./assets/20250711点云碰撞预警.gif)
 
 ### Gazebo仿真
 
