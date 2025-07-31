@@ -1,7 +1,5 @@
 <!doctype html>
 <html>
-  <title>卞振伟工作成果</title>
-  <link rel="icon" href="./assets/B.ico" type="image/x-icon">
 <head>
 <meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
 
@@ -32,8 +30,8 @@ img { max-width: 100%; vertical-align: middle; image-orientation: from-image; }
 button, input, select, textarea { color: inherit; font: inherit; }
 input[type="checkbox"], input[type="radio"] { line-height: normal; padding: 0px; }
 *, ::after, ::before { box-sizing: border-box; }
-#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p, #write pre { width: inherit; }
-#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p { position: relative; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p, #write pre { width: inherit; position: relative; }
+#write svg h1, #write svg h2, #write svg h3, #write svg h4, #write svg h5, #write svg h6, #write svg p { position: static; }
 p { line-height: inherit; }
 h1, h2, h3, h4, h5, h6 { break-after: avoid-page; break-inside: avoid; orphans: 4; }
 p { orphans: 4; }
@@ -163,6 +161,7 @@ mark .md-meta { color: rgb(0, 0, 0); }
 .md-fences.md-fences-math { font-size: 1em; }
 .md-fences-advanced:not(.md-focus) { padding: 0px; white-space: nowrap; border: 0px; }
 .md-fences-advanced:not(.md-focus) { background: inherit; }
+.mermaid-svg { margin: auto; }
 .typora-export-show-outline .typora-export-content { max-width: 1440px; margin: auto; display: flex; flex-direction: row; }
 .typora-export-sidebar { width: 300px; font-size: 0.8rem; margin-top: 80px; margin-right: 18px; }
 .typora-export-show-outline #write { --webkit-flex: 2; flex: 2 1 0%; }
@@ -242,10 +241,10 @@ mjx-container { break-inside: avoid; }
   /* "Consolas" 从 Windows Vista 起成为 Windows 官方提供的字体 */
   --code-font: "Latin Modern Mono", "Latin Modern Mono 10", "Consolas", "Courier New";
   /* 侧边栏字体 */
-  --ui-font: "Noto Sans CJK SC";
+  --ui-font: "阿里巴巴普惠体 2.0", "微软雅黑";
   /* source mode 字体 */
   /* 默认调用 code-font 和 ui-font */
-  --sourceMode-font: "SF Mono", "Noto Sans CJK SC";
+  --sourceMode-font: "SF Mono", "阿里巴巴普惠体 2.0", "微软雅黑";
   /* 目录字体 */
   /* 默认调用 base-font */
   --toc-font: "";
@@ -260,25 +259,25 @@ mjx-container { break-inside: avoid; }
   --table-font: "";
   /* 标题字体（总设置） */
   --heading-Latin-font: var(--base-Latin-font);
-  --heading-Chinese-font: "Noto Sans CJK SC";
+  --heading-Chinese-font: "华文黑体";
   /* 标题字体分别设置 */
   /* 大标题（h1）字体 */
-  --title-Chinese-font: "Noto Sans CJK SC";
+  --title-Chinese-font: "华文黑体";
   --title-font-size: 1.9em;
   /* h2字体 */
-  --h2-Chinese-font: "Noto Sans CJK SC";
+  --h2-Chinese-font: "华文黑体";
   --h2-font-size: 1.5em;
   /* h3字体 */
-  --h3-Chinese-font: "Noto Sans CJK SC";
+  --h3-Chinese-font: "华文黑体";
   --h3-font-size: 1.25em;
   /* h4字体 */
-  --h4-Chinese-font: "Noto Serif CJK SC";
+  --h4-Chinese-font: "华文楷体";
   --h4-font-size: 1.15em;
   /* h5字体 */
-  --h5-Chinese-font: "Noto Serif CJK SC";
+  --h5-Chinese-font: "华文仿宋";
   --h5-font-size: 1.10em;
   /* h6字体 */
-  --h6-Chinese-font: "Noto Serif CJK SC";
+  --h6-Chinese-font: "华文仿宋";
   --h6-font-size: 1.05em;
   /* 粗体样式设置 */
   /* 加粗风格时使用的字重；400等同于 normal，700等同于 bold，900等同于 heavy */
@@ -463,6 +462,7 @@ h6.md-focus:before {
 #write h4,
 #write h5,
 #write h6 {
+  font-weight: bold;
   break-after: avoid-page !important;
 }
 #write h1 {
@@ -892,7 +892,7 @@ li code {
 
 </style><title>index</title>
 </head>
-<body class='typora-export'><div class='typora-export-content'>
+<body class='typora-export os-windows'><div class='typora-export-content'>
 <div id='write'  class=''><h1 id='工作成果---介绍'><span>工作成果 - 介绍</span></h1><center><div style='height:2mm;'></div><div style="font-family:华文楷体;f
     ont-size:14pt;">卞振伟，zhenweibian.sh@gmail.com</div></center>
 <center><span style="font-family:华文楷体;font-size:9pt;line-height:9mm">中国，上海</span>
@@ -913,13 +913,19 @@ Hi there! My name is Bian Zhenwei. My interests are in the fields of robotics, s
 <div>
 <div style="width:82px;float:left;line-height:16pt"><b>Key Words: </b></div> 
 <div style="overflow:hidden;line-height:16pt">Robotics; Simulation; Software Engineering; Cloud Native;</div>
-</div><p>&nbsp;</p><p><strong><span>目录结构</span></strong><span>：</span></p><div class='md-toc' mdtype='toc'><p class="md-toc-content" role="list"><span role="listitem" class="md-toc-item md-toc-h1" data-ref="n445"><a class="md-toc-inner" href="#工作成果---介绍">工作成果 - 介绍</a></span><span role="listitem" class="md-toc-item md-toc-h1" data-ref="n454"><a class="md-toc-inner" href="#work-results---introduction">Work results - Introduction</a></span><span role="listitem" class="md-toc-item md-toc-h1" data-ref="n464"><a class="md-toc-inner" href="#工作成果">工作成果</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n465"><a class="md-toc-inner" href="#2024-5-至今-xx公司">2024-5 至今 XX公司</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n466"><a class="md-toc-inner" href="#isaac仿真平台搭建及机器人训练">Isaac仿真平台搭建及机器人训练</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n470"><a class="md-toc-inner" href="#ros2上位机软件">ROS2上位机软件</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n473"><a class="md-toc-inner" href="#机器人数据存储及可视化">机器人数据存储及可视化</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n477"><a class="md-toc-inner" href="#机器人遥操webgl">机器人遥操WebGL</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n480"><a class="md-toc-inner" href="#gazebo仿真">Gazebo仿真</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n483"><a class="md-toc-inner" href="#2020-12-至-2024-4-视比特机器人有限公司">2020-12 至 2024-4 视比特机器人有限公司</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n484"><a class="md-toc-inner" href="#仿真软件开发">仿真软件开发</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n489"><a class="md-toc-inner" href="#离散事件仿真软件">离散事件仿真软件</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n493"><a class="md-toc-inner" href="#焊接虚拟调试工艺包">焊接虚拟调试工艺包</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n496"><a class="md-toc-inner" href="#上下料单栈虚拟研发">上下料单栈虚拟研发</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n499"><a class="md-toc-inner" href="#中联长沙分拣线虚拟调试">中联长沙分拣线虚拟调试</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n502"><a class="md-toc-inner" href="#仿真软件内场景构建">仿真软件内场景构建</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n505"><a class="md-toc-inner" href="#上海展厅虚实同步-5x">上海展厅虚实同步 5x</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n508"><a class="md-toc-inner" href="#机器人编程流程图编程">机器人编程(流程图编程)</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n511"><a class="md-toc-inner" href="#服务器算力集群搭建">服务器算力集群搭建</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n521"><a class="md-toc-inner" href="#借助vrep进行sim2real码垛仿真">借助Vrep进行Sim2real码垛仿真</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n524"><a class="md-toc-inner" href="#ros1-rviz-插件编写">ROS1 Rviz 插件编写</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n527"><a class="md-toc-inner" href="#ros1-flow-based-programming">ROS1 flow based programming</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n530"><a class="md-toc-inner" href="#pcl点云库">PCL点云库</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n533"><a class="md-toc-inner" href="#在校成果">在校成果</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n534"><a class="md-toc-inner" href="#论文">论文</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n542"><a class="md-toc-inner" href="#荣誉成绩">荣誉成绩</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n562"><a class="md-toc-inner" href="#基于计算机视觉的辅助驾驶系统">基于计算机视觉的辅助驾驶系统</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n585"><a class="md-toc-inner" href="#综合测评网站">综合测评网站</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n600"><a class="md-toc-inner" href="#onlinejudge搭建及维护">OnlineJudge搭建及维护</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n614"><a class="md-toc-inner" href="#算法与数据结构在校编程竞赛经历">算法与数据结构(在校编程竞赛经历)</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n637"><a class="md-toc-inner" href="#linux终端爱好者">Linux终端爱好者</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n644"><a class="md-toc-inner" href="#机器学习和深度学习">机器学习和深度学习</a></span></p></div><h1 id='工作成果'><span>工作成果</span></h1><h2 id='2024-5-至今-xx公司'><span>2024-5 至今 XX公司</span></h2><h3 id='isaac仿真平台搭建及机器人训练'><span>Isaac仿真平台搭建及机器人训练</span></h3><p><strong><span>开发角色：</span></strong><span>个人</span>
-<strong><span>业务目标：</span></strong><span>运动学和动力学(关节、轮子、手指)、视觉仿真、物理引擎、训练</span></p><video src="./videos/20241118Isaac%E5%B1%95%E7%A4%BA.mp4" style="width: 100%; height: 100%;" controls="controls"></video><video src="./videos/20250212%E5%A4%9A%E6%9C%BA%E5%99%A8%E4%BA%BA%E8%AE%AD%E7%BB%83.mp4" style="width: 100%; height: 100%;" controls="controls"></video><h3 id='ros2上位机软件'><span>ROS2上位机软件</span></h3><p><strong><span>开发角色：</span></strong><span>个人</span>
+</div><p>&nbsp;</p><p><strong><span>目录结构</span></strong><span>：</span></p><div class='md-toc' mdtype='toc'><p class="md-toc-content" role="list"><span role="listitem" class="md-toc-item md-toc-h1" data-ref="n0"><a class="md-toc-inner" href="#工作成果---介绍">工作成果 - 介绍</a></span><span role="listitem" class="md-toc-item md-toc-h1" data-ref="n9"><a class="md-toc-inner" href="#work-results---introduction">Work results - Introduction</a></span><span role="listitem" class="md-toc-item md-toc-h1" data-ref="n19"><a class="md-toc-inner" href="#工作成果">工作成果</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n20"><a class="md-toc-inner" href="#2024-5-至今-xx公司">2024-5 至今 XX公司</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n21"><a class="md-toc-inner" href="#isaac仿真平台搭建及机器人训练">Isaac仿真平台搭建及机器人训练</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n25"><a class="md-toc-inner" href="#ros2上位机软件">ROS2上位机软件</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n28"><a class="md-toc-inner" href="#电机驱动软件">电机驱动软件</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n32"><a class="md-toc-inner" href="#机器人数据存储及可视化">机器人数据存储及可视化</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n36"><a class="md-toc-inner" href="#机器人遥操webgl">机器人遥操WebGL</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n39"><a class="md-toc-inner" href="#三维遥操辅助平台linux">三维遥操辅助平台(Linux)</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n42"><a class="md-toc-inner" href="#gazebo仿真">Gazebo仿真</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n45"><a class="md-toc-inner" href="#2020-12-至-2024-4-视比特机器人有限公司">2020-12 至 2024-4 视比特机器人有限公司</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n46"><a class="md-toc-inner" href="#仿真软件开发">仿真软件开发</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n51"><a class="md-toc-inner" href="#离散事件仿真软件">离散事件仿真软件</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n55"><a class="md-toc-inner" href="#焊接虚拟调试工艺包">焊接虚拟调试工艺包</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n58"><a class="md-toc-inner" href="#上下料单栈虚拟研发">上下料单栈虚拟研发</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n61"><a class="md-toc-inner" href="#中联长沙分拣线虚拟调试">中联长沙分拣线虚拟调试</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n64"><a class="md-toc-inner" href="#仿真软件内场景构建">仿真软件内场景构建</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n67"><a class="md-toc-inner" href="#上海展厅虚实同步-5x">上海展厅虚实同步 5x</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n70"><a class="md-toc-inner" href="#机器人编程流程图编程">机器人编程(流程图编程)</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n73"><a class="md-toc-inner" href="#服务器算力集群搭建">服务器算力集群搭建</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n83"><a class="md-toc-inner" href="#借助vrep进行sim2real码垛仿真">借助Vrep进行Sim2real码垛仿真</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n86"><a class="md-toc-inner" href="#ros1-rviz-插件编写">ROS1 Rviz 插件编写</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n89"><a class="md-toc-inner" href="#ros1-flow-based-programming">ROS1 flow based programming</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n92"><a class="md-toc-inner" href="#pcl点云库">PCL点云库</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n95"><a class="md-toc-inner" href="#在校成果">在校成果</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n96"><a class="md-toc-inner" href="#论文">论文</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n104"><a class="md-toc-inner" href="#荣誉成绩">荣誉成绩</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n124"><a class="md-toc-inner" href="#基于计算机视觉的辅助驾驶系统">基于计算机视觉的辅助驾驶系统</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n147"><a class="md-toc-inner" href="#综合测评网站">综合测评网站</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n162"><a class="md-toc-inner" href="#onlinejudge搭建及维护">OnlineJudge搭建及维护</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n176"><a class="md-toc-inner" href="#算法与数据结构在校编程竞赛经历">算法与数据结构(在校编程竞赛经历)</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n199"><a class="md-toc-inner" href="#linux终端爱好者">Linux终端爱好者</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n206"><a class="md-toc-inner" href="#机器学习和深度学习">机器学习和深度学习</a></span></p></div><h1 id='工作成果'><span>工作成果</span></h1><h2 id='2024-5-至今-xx公司'><span>2024-5 至今 XX公司</span></h2><h3 id='isaac仿真平台搭建及机器人训练'><span>Isaac仿真平台搭建及机器人训练</span></h3><p><strong><span>开发角色：</span></strong><span>个人</span>
+<strong><span>业务目标：</span></strong><span>运动学和动力学(关节、轮子、手指)、视觉仿真、物理引擎、训练</span>
+<strong><span>技术方案</span></strong><span>：Python、C++</span></p><video src="./videos/20241118Isaac%E5%B1%95%E7%A4%BA.mp4" style="width: 100%; height: 100%;" controls="controls"></video><video src="./videos/20250212%E5%A4%9A%E6%9C%BA%E5%99%A8%E4%BA%BA%E8%AE%AD%E7%BB%83.mp4" style="width: 100%; height: 100%;" controls="controls"></video><h3 id='ros2上位机软件'><span>ROS2上位机软件</span></h3><p><strong><span>开发角色：</span></strong><span>个人</span>
 <strong><span>业务目标：</span></strong><span>上位机软件(数采、控制、离线编程)</span>
-<strong><span>技术方案：</span></strong><span>C++、QT、ROS2</span></p><video src="https://gitlab.com/MrVBian/Introduction/-/raw/master/20241009%E4%B8%8A%E4%BD%8D%E6%9C%BA%E5%8A%9F%E8%83%BD%E5%B1%95%E7%A4%BA.mp4" style="width: 100%; height: 100%;" controls="controls"></video><h3 id='机器人数据存储及可视化'><span>机器人数据存储及可视化</span></h3><p><strong><span>开发角色：</span></strong><span>个人</span>
-<strong><span>业务目标：</span></strong><span>基于时序数据库(InfluxDB)、ROS2、Grafana，实现机器人数据数采存储及数据可视化</span></p><video src="https://gitlab.com/MrVBian/Introduction/-/raw/94cc1200a6bda16db76ef5575080ca0795c0acec/20241010%E6%97%B6%E5%BA%8F%E6%95%B0%E9%87%87.mp4" style="width: 100%; height: 100%;" controls="controls"></video><h3 id='机器人遥操webgl'><span>机器人遥操WebGL</span></h3><p><strong><span>开发角色：</span></strong><span>个人</span>
+<strong><span>技术方案：</span></strong><span>C++、QT、ROS2</span></p><video src="https://gitlab.com/MrVBian/Introduction/-/raw/master/20241009%E4%B8%8A%E4%BD%8D%E6%9C%BA%E5%8A%9F%E8%83%BD%E5%B1%95%E7%A4%BA.mp4" style="width: 100%; height: 100%;" controls="controls"></video><h3 id='电机驱动软件'><span>电机驱动软件</span></h3><p><strong><span>开发角色：</span></strong><span>个人</span>
+<strong><span>业务目标：</span></strong><span>基于串口通信协议，完成电机参数读写及辅助调试功能。集成高性能示波器模块，支持 20000Hz (50ms) 采样频率的数据采集与实时绘图。示波器支持鼠标交互操作和多图表同X轴绘制，并具备基于大容量数据的 X/Y 轴自动缩放能力。</span>
+<strong><span>技术方案</span></strong><span>：C++、QT</span></p><p><img src="./assets/FuturMFD1.png" referrerpolicy="no-referrer"></p><p><img src="./assets/FuturMFD2.png" referrerpolicy="no-referrer"></p><h3 id='机器人数据存储及可视化'><span>机器人数据存储及可视化</span></h3><p><strong><span>开发角色：</span></strong><span>个人</span>
+<strong><span>业务目标：</span></strong><span>基于时序数据库(InfluxDB)、ROS2、Grafana，实现机器人数据数采存储及数据可视化</span>
+<strong><span>技术方案</span></strong><span>：Python、ROS2</span></p><video src="https://gitlab.com/MrVBian/Introduction/-/raw/94cc1200a6bda16db76ef5575080ca0795c0acec/20241010%E6%97%B6%E5%BA%8F%E6%95%B0%E9%87%87.mp4" style="width: 100%; height: 100%;" controls="controls"></video><h3 id='机器人遥操webgl'><span>机器人遥操WebGL</span></h3><p><strong><span>开发角色：</span></strong><span>个人</span>
 <strong><span>业务目标：</span></strong><span>Web页面辅助用户机器人遥操</span>
-<strong><span>技术方案：</span></strong><span>ROS2、WebSocket、Unity、Nginx</span></p><video src="https://gitlab.com/MrVBian/Introduction/-/raw/94cc1200a6bda16db76ef5575080ca0795c0acec/20241010WebGL%E5%8A%9F%E8%83%BD%E5%B1%95%E7%A4%BA.mp4" style="width: 100%; height: 100%;" controls="controls"></video><h3 id='gazebo仿真'><span>Gazebo仿真</span></h3><p><strong><span>开发角色：</span></strong><span>个人</span>
+<strong><span>技术方案：</span></strong><span>ROS2、WebSocket、Unity、Nginx</span></p><video src="https://gitlab.com/MrVBian/Introduction/-/raw/94cc1200a6bda16db76ef5575080ca0795c0acec/20241010WebGL%E5%8A%9F%E8%83%BD%E5%B1%95%E7%A4%BA.mp4" style="width: 100%; height: 100%;" controls="controls"></video><h3 id='三维遥操辅助平台linux'><span>三维遥操辅助平台(Linux)</span></h3><p><strong><span>开发角色：</span></strong><span>两人</span>
+<strong><span>业务目标：</span></strong><span> 提升用户空间感知能力，辅助高效远程操作（遥操），提供智能视图增强、三维环境重建、机器人状态监控与遥操交互引导功能；支持基于大文件三维重建点云的</span><strong><span>实时碰撞检测</span></strong><span>并预警碰撞距离。</span>
+<strong><span>技术方案：</span></strong><span>Unity、ROS2</span></p><p><img src="./assets/20250711点云碰撞预警.gif" referrerpolicy="no-referrer"></p><h3 id='gazebo仿真'><span>Gazebo仿真</span></h3><p><strong><span>开发角色：</span></strong><span>个人</span>
 <strong><span>业务目标：</span></strong><span>在gazebo中模拟机器人、2D相机、3D相机、激光雷达，以供在仿真中训练算法</span></p><video src="https://gitlab.com/MrVBian/Introduction/-/raw/master/20240726Gazebo(lidar%20rgb%E5%92%8Cdepth%E7%9B%B8%E6%9C%BA).mp4" style="width: 100%; height: 100%;" controls="controls"></video><h2 id='2020-12-至-2024-4-视比特机器人有限公司'><span>2020-12 至 2024-4 视比特机器人有限公司</span></h2><h3 id='仿真软件开发'><span>仿真软件开发</span></h3><p><span>介绍：从零到一开发数字孪生平台。数字孪生平台拥有丰富的组件模型库以及模型自动装配等功能，具备灵活的场景构建能力，平台内置物理引擎，能够高效模拟重力等物理属性，同时自带2D/3D图像生成、工艺仿真、物流仿真、虚拟调试、数字孪生功能，用于智能化工厂产线建设、程序开发、虚拟调试和数字孪生运营等功能。</span></p><p><img src="./assets/title.png" referrerpolicy="no-referrer"></p><p><img src="./assets/builder模板.png" referrerpolicy="no-referrer"></p><p><img src="./assets/builder支撑方向.png" referrerpolicy="no-referrer"></p><h4 id='离散事件仿真软件'><span>离散事件仿真软件</span></h4><p><strong><span>开发角色：</span></strong><span>九人团队主管</span>
 <strong><span>主要工作：</span></strong><span>离散仿真器开发、节点设计</span>
 <strong><span>业务目标：推算年产量、优化节拍、优化布局</span></strong></p><p><img src="https://www.showdoc.com.cn/server/api/attachment/visitFile?sign=ec6e1a0ec2c4d67d1d843f3bfb451ce8&amp;file=file.png" referrerpolicy="no-referrer"></p><video src="https://gitlab.com/MrVBian/Introduction/-/raw/94cc1200a6bda16db76ef5575080ca0795c0acec/20240314%E8%8A%82%E6%8B%8D%E4%BB%BF%E7%9C%9F.mp4" style="width: 100%; height: 100%;" controls muted></video><h4 id='焊接虚拟调试工艺包'><span>焊接虚拟调试工艺包</span></h4><p><strong><span>开发角色：</span></strong><span>九人团队主管</span>
