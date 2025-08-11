@@ -82,21 +82,25 @@ Hi there! My name is Bian Zhenwei. My interests are in the fields of robotics, s
 
 <video src="./videos/20241009%E4%B8%8A%E4%BD%8D%E6%9C%BA%E5%8A%9F%E8%83%BD%E5%B1%95%E7%A4%BA.mp4" style="width: 100%; height: 100%;" controls="controls"></video>
 
-#### 机器人遥操WebGL
-
-**开发角色：**个人
-**业务目标：**Web页面辅助用户机器人遥操
-**技术方案：**ROS2、WebSocket、Unity、Nginx
-
-<video src="./videos/20241010WebGL%E5%8A%9F%E8%83%BD%E5%B1%95%E7%A4%BA.mp4" style="width: 100%; height: 100%;" controls="controls"></video>
-
 #### 三维遥操辅助平台(Linux)
 
 **开发角色：**两人(主程)
-**业务目标：** 提升用户空间感知能力，辅助高效远程操作（遥操），提供智能视图增强、三维环境重建、机器人状态监控与遥操交互引导功能；支持基于大文件三维重建点云的**实时碰撞检测**并预警碰撞距离。
-**技术方案：**Unity、ROS2
+**业务目标：** 提升用户空间感知能力，辅助高效远程操作（遥操），提供智能视图增强、三维环境重建、机器人状态监控与遥操交互引导功能；
+**技术方案：**Unity、ROS2、PCL
+
+![](./assets/20250811三维遥操辅助平台.png)
+
+支持基于大文件三维重建点云的**实时碰撞检测**并预警碰撞距离：
 
 ![](./assets/20250711点云碰撞预警.gif)
+
+#### 机器人遥操WebGL
+
+**开发角色：**个人
+**业务目标：**基于Unity WebGL技术开发机器人三维可视化界面，通过WebSocket协议打通网页前端与ROS2系统的实时双向通信链路，使用户能够通过浏览器完成远程监控与操控。
+**技术方案：**ROS2、WebSocket、Unity、Nginx
+
+<video src="./videos/20241010WebGL%E5%8A%9F%E8%83%BD%E5%B1%95%E7%A4%BA.mp4" style="width: 100%; height: 100%;" controls="controls"></video>
 
 ### 嵌入式软件
 
@@ -104,8 +108,8 @@ Hi there! My name is Bian Zhenwei. My interests are in the fields of robotics, s
 
 **开发角色：**个人
 **业务目标：**基于串口通信协议，完成伺服参数读写及辅助调试功能，并集成硬件老化测试功能
-**技术方案**：C++、QT
-**业务目标：**串口校验、电机调试助手、老化测试工具
+**技术方案**：C++、QT、Advanced Installer(安装包)
+**业务目标：**串口校验、电机调试助手、老化测试工具、软件在线更新
 
 ![](./assets/FuturMFD1.png)
 
@@ -113,8 +117,8 @@ Hi there! My name is Bian Zhenwei. My interests are in the fields of robotics, s
 
 **开发角色：**个人
 **业务目标：**基于串口通信协议，集成高性能示波器模块，支持 20000Hz (50ms) 采样频率的数据采集与实时绘图。示波器支持鼠标交互操作和多图表同X轴绘制，并具备基于大容量数据的 X/Y 轴自动缩放能力。
-**技术方案**：C++、QT
-**业务目标：**伺服助手、示波器、老化测试工具
+**技术方案**：C++、QT、Advanced Installer(安装包)
+**业务目标：**示波器、微秒级、软件在线更新
 
 <video src="./videos/20250811%E4%BC%BA%E6%9C%8D%E4%B8%8A%E4%BD%8D%E6%9C%BA%E7%A4%BA%E6%B3%A2%E5%99%A8.mp4" style="width: 100%; height: 100%;" controls="controls"></video>
 
