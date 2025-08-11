@@ -43,7 +43,9 @@ Hi there! My name is Bian Zhenwei. My interests are in the fields of robotics, s
 
 ## 2024-5 至今 XX公司
 
-### Isaac仿真平台搭建及机器人训练
+### 仿真相关
+
+#### Isaac仿真平台搭建及机器人训练
 
 **开发角色：**个人
 **业务目标：**运动学和动力学(关节、轮子、手指)、视觉仿真、物理引擎、训练
@@ -53,55 +55,78 @@ Hi there! My name is Bian Zhenwei. My interests are in the fields of robotics, s
 
 <video src="./videos/20250212%E5%A4%9A%E6%9C%BA%E5%99%A8%E4%BA%BA%E8%AE%AD%E7%BB%83.mp4" style="width: 100%; height: 100%;" controls="controls"></video>
 
-### ROS2上位机软件
+#### URDF模型
+
+**开发角色：**个人
+**业务目标：**维护多型号机器人 URDF 模型，确保关节、轮子、灵巧手、相机等仿真参数的准确性
+
+![zmebot_evt_description](./assets/zmebot_evt_description.png)
+
+**拓扑结构(一款机器人案例)：**
+![zmebot_description](./assets/zmebot_evt_description.jpg)
+
+#### Gazebo仿真
+
+**开发角色：**个人
+**业务目标：**在gazebo中模拟机器人、2D相机、3D相机、激光雷达，以供在仿真中训练算法
+
+<video src="./videos/20240726Gazebo(lidar%20rgb%E5%92%8Cdepth%E7%9B%B8%E6%9C%BA).mp4" style="width: 100%; height: 100%;" controls="controls"></video>
+
+### 仿真软件
+
+#### ROS2上位机软件(离线编程)
 
 **开发角色：**个人
 **业务目标：**上位机软件(数采、控制、离线编程)
 **技术方案：**C++、QT、ROS2
 
-<video src="https://gitlab.com/MrVBian/Introduction/-/raw/master/20241009%E4%B8%8A%E4%BD%8D%E6%9C%BA%E5%8A%9F%E8%83%BD%E5%B1%95%E7%A4%BA.mp4" style="width: 100%; height: 100%;" controls="controls"></video>
+<video src="./videos/20241009%E4%B8%8A%E4%BD%8D%E6%9C%BA%E5%8A%9F%E8%83%BD%E5%B1%95%E7%A4%BA.mp4" style="width: 100%; height: 100%;" controls="controls"></video>
 
-### 电机驱动软件
-
-**开发角色：**个人
-**业务目标：**基于串口通信协议，完成电机参数读写及辅助调试功能。集成高性能示波器模块，支持 20000Hz (50ms) 采样频率的数据采集与实时绘图。示波器支持鼠标交互操作和多图表同X轴绘制，并具备基于大容量数据的 X/Y 轴自动缩放能力。
-**技术方案**：C++、QT
-
-![](./assets/FuturMFD1.png)
-
-![](./assets/FuturMFD2.png)
-
-### 机器人数据存储及可视化
-
-**开发角色：**个人
-**业务目标：**基于时序数据库(InfluxDB)、ROS2、Grafana，实现机器人数据数采存储及数据可视化
-**技术方案**：Python、ROS2
-
-<video src="https://gitlab.com/MrVBian/Introduction/-/raw/94cc1200a6bda16db76ef5575080ca0795c0acec/20241010%E6%97%B6%E5%BA%8F%E6%95%B0%E9%87%87.mp4" style="width: 100%; height: 100%;" controls="controls"></video>
-
-
-### 机器人遥操WebGL
+#### 机器人遥操WebGL
 
 **开发角色：**个人
 **业务目标：**Web页面辅助用户机器人遥操
 **技术方案：**ROS2、WebSocket、Unity、Nginx
 
-<video src="https://gitlab.com/MrVBian/Introduction/-/raw/94cc1200a6bda16db76ef5575080ca0795c0acec/20241010WebGL%E5%8A%9F%E8%83%BD%E5%B1%95%E7%A4%BA.mp4" style="width: 100%; height: 100%;" controls="controls"></video>
+<video src="./videos/20241010WebGL%E5%8A%9F%E8%83%BD%E5%B1%95%E7%A4%BA.mp4" style="width: 100%; height: 100%;" controls="controls"></video>
 
-### 三维遥操辅助平台(Linux)
+#### 三维遥操辅助平台(Linux)
 
-**开发角色：**两人
+**开发角色：**两人(主程)
 **业务目标：** 提升用户空间感知能力，辅助高效远程操作（遥操），提供智能视图增强、三维环境重建、机器人状态监控与遥操交互引导功能；支持基于大文件三维重建点云的**实时碰撞检测**并预警碰撞距离。
 **技术方案：**Unity、ROS2
 
 ![](./assets/20250711点云碰撞预警.gif)
 
-### Gazebo仿真
+### 嵌入式软件
+
+#### 伺服上位机软件
 
 **开发角色：**个人
-**业务目标：**在gazebo中模拟机器人、2D相机、3D相机、激光雷达，以供在仿真中训练算法
+**业务目标：**基于串口通信协议，完成伺服参数读写及辅助调试功能，并集成硬件老化测试功能
+**技术方案**：C++、QT
+**业务目标：**串口校验、电机调试助手、老化测试工具
 
-<video src="https://gitlab.com/MrVBian/Introduction/-/raw/master/20240726Gazebo(lidar%20rgb%E5%92%8Cdepth%E7%9B%B8%E6%9C%BA).mp4" style="width: 100%; height: 100%;" controls="controls"></video>
+![](./assets/FuturMFD1.png)
+
+#### 示波器软件
+
+**开发角色：**个人
+**业务目标：**基于串口通信协议，集成高性能示波器模块，支持 20000Hz (50ms) 采样频率的数据采集与实时绘图。示波器支持鼠标交互操作和多图表同X轴绘制，并具备基于大容量数据的 X/Y 轴自动缩放能力。
+**技术方案**：C++、QT
+**业务目标：**伺服助手、示波器、老化测试工具
+
+<video src="./videos/20250811%E4%BC%BA%E6%9C%8D%E4%B8%8A%E4%BD%8D%E6%9C%BA%E7%A4%BA%E6%B3%A2%E5%99%A8.mp4" style="width: 100%; height: 100%;" controls="controls"></video>
+
+### 其它软件
+
+#### 机器人数据存储及可视化
+
+**开发角色：**个人
+**业务目标：**基于时序数据库(InfluxDB)、ROS2、Grafana，实现机器人数据数采存储及数据可视化
+**技术方案**：Python、ROS2
+
+<video src="./videos/20241010%E6%97%B6%E5%BA%8F%E6%95%B0%E9%87%87.mp4" style="width: 100%; height: 100%;" controls="controls"></video>
 
 ## 2020-12 至 2024-4 视比特机器人有限公司
 
@@ -121,9 +146,9 @@ Hi there! My name is Bian Zhenwei. My interests are in the fields of robotics, s
 **主要工作：**离散仿真器开发、节点设计
 **业务目标：推算年产量、优化节拍、优化布局**
 
-![](https://www.showdoc.com.cn/server/api/attachment/visitFile?sign=ec6e1a0ec2c4d67d1d843f3bfb451ce8&file=file.png)
+![](./assets/20240314离散时间仿真.png)
 
-<video src="https://gitlab.com/MrVBian/Introduction/-/raw/94cc1200a6bda16db76ef5575080ca0795c0acec/20240314%E8%8A%82%E6%8B%8D%E4%BB%BF%E7%9C%9F.mp4" style="width: 100%; height: 100%;" controls muted></video>
+<video src="./videos/20240314%E8%8A%82%E6%8B%8D%E4%BB%BF%E7%9C%9F.mp4" style="width: 100%; height: 100%;" controls muted></video>
 
 #### 焊接虚拟调试工艺包
 
@@ -131,35 +156,39 @@ Hi there! My name is Bian Zhenwei. My interests are in the fields of robotics, s
 **主要工作：**焊缝提取、机器人点位表、离线编程(fanuc)
 **业务目标：**焊缝提取、机器人免示教、可视化编程
 
-<video src="https://gitlab.com/MrVBian/Introduction/-/raw/c99860d5c1a69aa525cea4e0aabf41c44f3d0b24/20231215%E7%84%8A%E6%8E%A5%E7%B4%A0%E6%9D%901.mp4" style="width: 100%; height: 100%;" controls="controls"></video>
+<video src="./videos/20231215%E7%84%8A%E6%8E%A5%E7%B4%A0%E6%9D%901.mp4" style="width: 100%; height: 100%;" controls="controls"></video>
 
 #### 上下料单栈虚拟研发
 
 **开发角色：**九人团队主管
 **主要工作：**相机标定、虚拟视觉仿真、行为树后端
 **业务目标：**虚拟视觉2D/3D，相机标定、行为树编程
-<video src="https://gitlab.com/MrVBian/Introduction/-/raw/master/20220531%E4%B8%8A%E4%B8%8B%E6%96%99%E8%99%9A%E6%8B%9F%E8%B0%83%E8%AF%95.mp4" style="width: 100%; height: 100%;" controls="controls"></video>
+
+<video src="./videos/20220531%E4%B8%8A%E4%B8%8B%E6%96%99%E8%99%9A%E6%8B%9F%E8%B0%83%E8%AF%95.mp4" style="width: 100%; height: 100%;" controls="controls"></video>
 
 #### 中联长沙分拣线虚拟调试
 
 **开发角色：**九人团队主管
 **主要工作：**虚拟视觉、传感器仿真、工业设备仿真(末端工具)
 **业务目标：**各部门联调、虚拟视觉、工业设备仿真
-<video src="https://gitlab.com/MrVBian/Introduction/-/raw/master/20220609%E4%B8%AD%E8%81%94%E9%95%BF%E6%B2%99.mp4" style="width: 100%; height: 100%;" controls="controls"></video>
+
+<video src="./videos/20220609%E4%B8%AD%E8%81%94%E9%95%BF%E6%B2%99.mp4" style="width: 100%; height: 100%;" controls="controls" muted></video>
 
 #### 仿真软件内场景构建
 
 **开发角色：**九人团队主管
 **主要工作：**对齐、装配、参数化模型工具
 **业务目标：**通过一系列工具辅助用户快速完成仿真场景的构建。包括例如：测距、捕捉、对齐、装配、阵列、角度捕捉等工具，以及参数化模型、机器人资产、工业设备资产等。
-<video src="https://gitlab.com/MrVBian/Introduction/-/raw/20d5c9c2deab9a5bfd5831821eecb89f99ad8aa2/20230107%E7%94%A8%E6%88%B7%E6%9E%84%E5%BB%BA%E5%9C%BA%E6%99%AF_%E4%B8%80%E5%88%86%E9%92%9F%E7%89%88.mp4" style="width: 100%; height: 100%;" controls="controls"></video>
+
+<video src="./videos/20230107%E7%94%A8%E6%88%B7%E6%9E%84%E5%BB%BA%E5%9C%BA%E6%99%AF_%E4%B8%80%E5%88%86%E9%92%9F%E7%89%88.mp4" style="width: 100%; height: 100%;" controls="controls"></video>
 
 #### 上海展厅虚实同步 5x
 
 **开发角色：**九人团队主管
 **主要工作：**分布式数采、虚实同步、模型压缩
 **业务工作：**构建真实展厅科幻画风的虚实1:1同步，展示数字化展厅。
-<video src="https://gitlab.com/MrVBian/Introduction/-/raw/master/20220801%E4%B8%8A%E6%B5%B7%E5%B1%95%E5%8E%85_5x.mp4" style="width: 100%; height: 100%;" controls="controls"></video>
+
+<video src="./videos/20220801%E4%B8%8A%E6%B5%B7%E5%B1%95%E5%8E%85_5x.mp4" style="width: 100%; height: 100%;" controls="controls"></video>
 
 #### 机器人编程(流程图编程)
 
@@ -167,7 +196,7 @@ Hi there! My name is Bian Zhenwei. My interests are in the fields of robotics, s
 **主要工作：**流程图后端开发
 **业务目标：**可视化编程、机器人免示教
 
-<video src="https://gitlab.com/MrVBian/Introduction/-/raw/c99860d5c1a69aa525cea4e0aabf41c44f3d0b24/2023062318%E6%9C%BA%E5%99%A8%E4%BA%BA%E7%BC%96%E7%A8%8B.mp4" style="width: 100%; height: 100%;" controls="controls"></video>
+<video src="./videos/20230118%E6%9C%BA%E5%99%A8%E4%BA%BA%E7%BC%96%E7%A8%8B.mp4" style="width: 100%; height: 100%;" controls="controls"></video>
 
 ### 服务器算力集群搭建
 
@@ -178,7 +207,7 @@ Hi there! My name is Bian Zhenwei. My interests are in the fields of robotics, s
 - 统一账号管理：通过单一账号登录多平台，简化账号管理
 - DevOps：搭建流水线，编写Jenkins流水线，实现harbor和sonarqube代码质量检查
 
-![](https://gitlab.com/MrVBian/Introduction/-/raw/5698b04d07faefab82d9514914bbfaf65d09265b/2023%E9%9B%86%E7%BE%A4%E6%9E%B6%E6%9E%84.png)
+![](./assets/2023集群架构.png)
 
 ### 借助Vrep进行Sim2real码垛仿真
 
@@ -289,7 +318,7 @@ Driving Assistance System Based on Deep Learning and Traditional Vision Zhenwei 
 
 **演示视频**
 
-<video src="https://gitlab.com/MrVBian/Introduction/-/raw/master/%E6%96%B0%E7%89%88%E6%BC%94%E7%A4%BA%E8%A7%86%E9%A2%91.mp4" style="width: 100%; height: 100%;" controls="controls"></video>
+<video src="./videos/%E6%96%B0%E7%89%88%E6%BC%94%E7%A4%BA%E8%A7%86%E9%A2%91.mp4" style="width: 100%; height: 100%;" controls="controls"></video>
 
 软件结构见下图
 
