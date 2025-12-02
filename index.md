@@ -122,6 +122,13 @@ Hi there! My name is Bian Zhenwei. My interests are in the fields of robotics, s
 
 <video src="./videos/20250811%E4%BC%BA%E6%9C%8D%E4%B8%8A%E4%BD%8D%E6%9C%BA%E7%A4%BA%E6%B3%A2%E5%99%A8.mp4" style="width: 100%; height: 100%;" controls="controls"></video>
 
+#### 老化测试软件
+
+**开发角色：**个人
+**业务目标：响应测试需求，完成老化测试**
+**技术方案**：C++、QT、Advanced Installer(安装包)
+![image-20251202163119121](./assets/AgingTest.png)
+
 ### 其它软件
 
 #### 机器人数据存储及可视化
