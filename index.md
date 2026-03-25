@@ -55,6 +55,12 @@ Hi there! My name is Bian Zhenwei. My interests are in the fields of robotics, s
 
 <video src="./videos/20250212%E5%A4%9A%E6%9C%BA%E5%99%A8%E4%BA%BA%E8%AE%AD%E7%BB%83.mp4" style="width: 100%; height: 100%;" controls="controls"></video>
 
+![Learn1](./assets/Learn1.jpg)
+
+![Learn1](./assets/Learn2.jpg)
+
+![Learn1](./assets/Learn3.jpg)
+
 #### URDF模型
 
 **开发角色：**个人
@@ -93,6 +99,8 @@ Hi there! My name is Bian Zhenwei. My interests are in the fields of robotics, s
 支持基于大文件三维重建点云的**实时碰撞检测**并预警碰撞距离：
 
 ![](./assets/20250711点云碰撞预警.gif)
+
+<video src="./videos/20260320Train.mp4" style="width: 100%; height: 100%;" controls="controls"></video>
 
 #### 机器人遥操WebGL
 
