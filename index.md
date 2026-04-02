@@ -41,7 +41,7 @@ Hi there! My name is Bian Zhenwei. My interests are in the fields of robotics, s
 
 #  工作成果
 
-## 2024-5 至今 XX公司
+## 2024-5 至今 上海未来不远机器人科技有限公司
 
 ### 仿真相关
 
