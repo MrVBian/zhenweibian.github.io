@@ -61,6 +61,14 @@ Hi there! My name is Bian Zhenwei. My interests are in the fields of robotics, s
 
 ![Learn1](./assets/Learn3.jpg)
 
+#### AR/VR遥操仿真
+
+**开发角色：**个人
+**业务目标：**Pico4 Ultra Enterprise一套基于手柄输入的机械臂末端控制，通过建立手柄姿态与机械臂末端位姿的映射算法，完成运动轨迹规划与控制系统，实现了直观、精准的远程操控
+**技术方案：**MuJoCo、MeshCat、XR Robotics、Placo、C++、Unity、Python
+
+<video src="./videos/20260414Pico4UE.mp4" style="width: 100%; height: 100%;" controls="controls"></video>
+
 #### URDF模型
 
 **开发角色：**个人
@@ -75,6 +83,7 @@ Hi there! My name is Bian Zhenwei. My interests are in the fields of robotics, s
 
 **开发角色：**个人
 **业务目标：**在gazebo中模拟机器人、2D相机、3D相机、激光雷达，以供在仿真中训练算法
+**技术方案：**Moveit、Gazebo、C++、QT
 
 <video src="./videos/20240726Gazebo(lidar%20rgb%E5%92%8Cdepth%E7%9B%B8%E6%9C%BA).mp4" style="width: 100%; height: 100%;" controls="controls"></video>
 
@@ -84,7 +93,7 @@ Hi there! My name is Bian Zhenwei. My interests are in the fields of robotics, s
 
 **开发角色：**个人
 **业务目标：**上位机软件(数采、控制、离线编程)
-**技术方案：**C++、QT、ROS2
+**技术方案：**Moveit、C++、QT、ROS2
 
 <video src="./videos/20241009%E4%B8%8A%E4%BD%8D%E6%9C%BA%E5%8A%9F%E8%83%BD%E5%B1%95%E7%A4%BA.mp4" style="width: 100%; height: 100%;" controls="controls"></video>
 
