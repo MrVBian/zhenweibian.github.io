@@ -237,10 +237,11 @@ Hi there! My name is Bian Zhenwei. My interests are in the fields of robotics, s
 
 ![](./assets/2023集群架构.png)
 
-### 借助Vrep进行Sim2real码垛仿真
+### CoppeliaSim（Vrep）码垛仿真
 
 **开发人员：**个人
-**业务目标：**结合强化学习做出的决策，利用Vrep实现码垛仿真
+**业务目标：**结合强化学习做出的决策，借助CoppeliaSim（Vrep）实现码垛仿真
+**技术方案**：CoppeliaSim（Vrep）、Python、Lua
 
 ![](./assets/16.gif)
 
