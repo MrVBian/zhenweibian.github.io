@@ -61,13 +61,15 @@ Hi there! My name is Bian Zhenwei. My interests are in the fields of robotics, s
 
 ![Learn1](./assets/Learn3.jpg)
 
-#### AR/VR遥操仿真
+#### AR/VR遥操 仿真/真机
 
 **开发角色：**个人
 **业务目标：**Pico4 Ultra Enterprise一套基于手柄输入的机械臂末端控制，通过建立手柄姿态与机械臂末端位姿的映射算法，完成运动轨迹规划与控制系统，实现了直观、精准的远程操控
-**技术方案：**MuJoCo、MeshCat、XR Robotics、Placo、C++、Unity、Python
+**技术方案：**Pinocchio、MuJoCo、Pico4UE、C++、Unity、Python
 
 <video src="./videos/20260414Pico4UE.mp4" style="width: 100%; height: 100%;" controls="controls"></video>
+
+<video src="./videos/20260509Pico4UE_to_agilex.mp4" style="width: 100%; height: 100%;" controls="controls"></video>
 
 #### URDF模型
 
@@ -133,7 +135,7 @@ Hi there! My name is Bian Zhenwei. My interests are in the fields of robotics, s
 #### 示波器软件
 
 **开发角色：**个人
-**业务目标：**基于串口通信协议，集成高性能示波器模块，支持 20000Hz (50ms) 采样频率的数据采集与实时绘图。示波器支持鼠标交互操作和多图表同X轴绘制，并具备基于大容量数据的 X/Y 轴自动缩放能力。
+**业务目标：**基于串口通信协议，集成高性能示波器模块，支持 20000Hz (50us) 采样频率的数据采集与实时绘图。示波器支持鼠标交互操作和多图表同X轴绘制，并具备基于大容量数据的 X/Y 轴自动缩放能力。
 **技术方案**：C++、QT、Advanced Installer(安装包)
 **业务目标：**示波器、微秒级、软件在线更新
 
